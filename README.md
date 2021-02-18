@@ -1,0 +1,1 @@
+Exercicios que realizarei durante o curso de web developer na trybe.
