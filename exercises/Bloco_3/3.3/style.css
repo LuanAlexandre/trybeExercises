@@ -7,10 +7,7 @@
   }
   .width-and-height {height: 50px; width: 50px;}
   .padding {padding: 20px;}
-  .margin {
-  /* insira aqui uma margem de 30px na classe abaixo para aplicá-la aos itens C e D */
-  }
-
+  .margin {margin: 30px;}
   .border {
   /* insira aqui uma borda com valor '5px solid black' para aplicá-la ao item D */
   }
