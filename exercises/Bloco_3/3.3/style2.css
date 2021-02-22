@@ -2,3 +2,5 @@ p, h1 {
     position: relative;
     left: 450px;
 }
+
+li:hover{background-color: purple;}
