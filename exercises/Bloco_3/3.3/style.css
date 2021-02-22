@@ -24,3 +24,15 @@
   top:370px;
   z-index: 1;
 }
+p {
+  position: absolute;
+  top: 100px;
+  left:305px;
+  z-index: 2;
+}
+.baloon{
+  width: 175px;
+  position:absolute; 
+  z-index: 1;
+  left: 300px;
+}
