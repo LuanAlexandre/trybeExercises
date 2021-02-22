@@ -12,4 +12,6 @@
   }
   .padding {padding: 20px;}
   .margin {margin 30px;}
-  .border {border: 5px solid black;}
+  .border {
+  /* insira aqui uma borda com valor '5px solid black' para aplicá-la ao item D */
+  }
