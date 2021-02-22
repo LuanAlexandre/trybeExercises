@@ -1,3 +1,4 @@
+/* Modelo de caixas - CSS */
 .caixa {
     color: white;
     display: inline-block;
@@ -9,3 +10,17 @@
   .padding {padding: 20px;}
   .margin {margin: 30px;}
   .border {border: 5px solid black;}
+
+/* Posicionamento de elementos */
+.super-mario{
+  width: 200px;
+  position: absolute; 
+  top: 100px;
+  z-index: 2;
+}
+.goomba{
+  width: 200px;
+  position: absolute;
+  top:370px;
+  z-index: 1;
+}
