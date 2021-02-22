@@ -4,3 +4,4 @@ p, h1 {
 }
 
 li:hover{background-color: purple;}
+li:active{font-family: monospace;}
