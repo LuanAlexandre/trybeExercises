@@ -36,3 +36,10 @@ p {
   z-index: 1;
   left: 300px;
 }
+.bowser{
+  position: absolute;
+  width: 400px;
+  top:30px;
+  left: 450px;
+  z-index: 0;
+}
