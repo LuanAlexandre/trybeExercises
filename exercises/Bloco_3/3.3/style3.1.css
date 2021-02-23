@@ -1,6 +1,5 @@
-p, h1 {
-    position: relative;
-    left: 450px;
+h1, p {
+    text-align: center;
 }
 
 li:hover{background-color: purple;}
