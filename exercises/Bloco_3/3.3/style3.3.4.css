@@ -27,6 +27,7 @@ li em{font-weight: bold;}
 
 /*Sintaxe da pseudoclasse nth-child encontrada em - https://developer.mozilla.org/pt-BR/docs/Web/CSS/:nth-child */
 ul li:nth-child(-n+3) {color: blue;}
+ul li.Java{background-color: rgb(241, 14, 90);}
  
 /* - (Bônus) Para cada link na lista de aliados da pessoa desenvolvedora,
  faça com que ao passar o mouse sobre cada um, o texto fique em negrito e assuma a cor de fonte "temática do site"
