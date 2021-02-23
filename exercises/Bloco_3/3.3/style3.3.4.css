@@ -13,7 +13,7 @@ ol li:nth-of-type(2n+1){text-transform: uppercase;}
  se alguma delas estiver em itálico, aumente seu tamanho para 40px e acrescente uma borda de 1px preta
  e sólida.*/
 
- h1, h2, h3, h4, h5, h6 {color: red}
+h1, h2, h3, h4, h5, h6 {color: red}
 h1 em{width: 40px; border: 1px solid black}
  
  /*- Faça todas as li's terem 20px de tamanho de fonte e, para todo texto em itálico dentro de alguma li,
@@ -24,6 +24,9 @@ li em{font-weight: bold;}
 
 /* - Na listagem de linguagens de programação, faça com que as 3 primeiras da lista possuam cor de fonte azul
  e, se alguma possuir "java*" no texto, utilize uma cor de fundo rosa.*/
+
+/*Sintaxe da pseudoclasse nth-child encontrada em - https://developer.mozilla.org/pt-BR/docs/Web/CSS/:nth-child */
+ul li:nth-child(-n+3) {color: blue;}
  
 /* - (Bônus) Para cada link na lista de aliados da pessoa desenvolvedora,
  faça com que ao passar o mouse sobre cada um, o texto fique em negrito e assuma a cor de fonte "temática do site"
