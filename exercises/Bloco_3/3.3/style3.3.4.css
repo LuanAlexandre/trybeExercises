@@ -20,6 +20,7 @@ h1 em{width: 40px; border: 1px solid black}
  utilize a propriedade font-weight para deixá-lo negrito.*/
 
 li {font-size: 20px;}
+li em{font-weight: bold;}
 
 /* - Na listagem de linguagens de programação, faça com que as 3 primeiras da lista possuam cor de fonte azul
  e, se alguma possuir "java*" no texto, utilize uma cor de fundo rosa.*/
