@@ -21,3 +21,4 @@
 */
 
 ol{background-color: yellow;}
+ol li:nth-of-type(2n){color: green}
