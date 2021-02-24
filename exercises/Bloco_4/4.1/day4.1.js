@@ -9,4 +9,5 @@ console.log(birthYear);
 
 // Parte III
 let base = 5, altura = 10;
-area = base * altura;
+let area = base * altura;
+let perimetro = 2*base + 2*altura;
