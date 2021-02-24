@@ -11,3 +11,6 @@ console.log(birthYear);
 let base = 5, altura = 10;
 let area = base * altura;
 let perimetro = 2*base + 2*altura;
+
+//Parte IV
+let nota = 76;
