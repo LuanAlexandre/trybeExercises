@@ -12,10 +12,12 @@ Parte 5: O mesmo da parte 4, mas usando a estrutura switch-case;
 
 ### Exercícios de Prática:
 
-Exercício 1: Criar 5 programas, onde cada um deve realizar uma __operação básica__ entre dois números;
+Exercício 1: Criar 5 programas, onde cada um deve realizar uma **_operação básica_** entre dois números;
 
-Exercício 2: Fazer um programa para retornar o maior de __dois__ números;
+Exercício 2: Fazer um programa para retornar o maior de **_dois_** números;
 
-Exercício 3: Dessa vez o programa deve retornar o maior entre __três__ número;
+Exercício 3: Dessa vez o programa deve retornar o maior entre **_três_** número;
+
+Exercício 4: Dado um número exiba na tela se ele é positivo, negativo ou zero;
 
 
