@@ -22,4 +22,6 @@ Exercício 4: Dado um número exiba na tela se ele é positivo, negativo ou zero
 
 Exercício 5: Neste exercício deve-se criar um programa que retorne se três ângulos definidos formam ou não um triângulo;
 
+Exercício 6: "Escreva um programa que recebe o nome de uma peça de xadrez e retorne os movimentos que ela faz." (Desafio - Fazer funcionar tanto se o nome da peça for recebido com letras maiúsculas quanto minúsculas.)
+
 
