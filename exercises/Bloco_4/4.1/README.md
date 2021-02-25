@@ -32,4 +32,4 @@ Exercício 9: Escreva um programa que defina três números em variáveis no seu
 
 Exercício 10: Calcular o lucro de uma empresa na venda de mil produtos;
 
-
+Exercício 11: Calcular o salário líquido de um(a) trabalhador(a);
