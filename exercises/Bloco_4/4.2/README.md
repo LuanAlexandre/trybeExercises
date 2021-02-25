@@ -6,4 +6,6 @@ Exercício 1: Exibir na tela todos os elementos do array, um de cada vez;
 
 Exercício 2: Somar todos os valores do array e exibir o resultado;
 
+Exercício 3: Calcular e exibir a média aritmética;
+
 
