@@ -22,6 +22,10 @@ Exercício 4: Dado um número exiba na tela se ele é positivo, negativo ou zero
 
 Exercício 5: Neste exercício deve-se criar um programa que retorne se três ângulos definidos formam ou não um triângulo;
 
-Exercício 6: "Escreva um programa que recebe o nome de uma peça de xadrez e retorne os movimentos que ela faz." (Desafio - Fazer funcionar tanto se o nome da peça for recebido com letras maiúsculas quanto minúsculas.)
+Exercício 6: "Escreva um programa que recebe o nome de uma peça de xadrez e retorne os movimentos que ela faz." (Desafio - Fazer funcionar tanto se o nome da peça for recebido com letras maiúsculas quanto minúsculas.);
+
+Exercício 7: Converter nota passada em porcentagem para o sistema A a F;
+
+Exercício 8: Escreva um programa que defina três números em variáveis no seu começo e retorne true se pelo menos uma das três for par. Caso contrário, ele retorna false. (Bônus - Use somente um if);
 
 
