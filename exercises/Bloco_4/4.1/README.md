@@ -1,6 +1,6 @@
 ## Descrição dos programas
 
-Exercícios de conteúdo:
+### Exercícios de Conteúdo:
 
 Parte 2: Criar um programa com minhas informações e exibir na tela, depois explicar o erro que é retornado ao tentar alterar uma constante;
 
@@ -10,4 +10,10 @@ Parte 4: Desenvolver um programa para exibir o estado de um candidato de um proc
 
 Parte 5: O mesmo da parte 4, mas usando a estrutura switch-case;
 
-Exercício 1: Criar 5 programas, onde cada um deve básica entre dois números
+### Exercícios de Prática:
+
+Exercício 1: Criar 5 programas, onde cada um deve realizar uma operação básica entre dois números;
+
+Exercício 2: Fazer um programa para retornar o maior de dois números;
+
+
