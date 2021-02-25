@@ -30,4 +30,6 @@ Exercício 8: Escreva um programa que defina três números em variáveis no seu
 
 Exercício 9: Escreva um programa que defina três números em variáveis no seu começo e retorne true se pelo menos uma das três for ímpar. Caso contrário, ele retorna false. (Bônus - Use somente um if);
 
+Exercício 10: Calcular o lucro de uma empresa na venda de mil produtos;
+
 
