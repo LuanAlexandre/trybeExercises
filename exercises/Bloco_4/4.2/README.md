@@ -8,4 +8,6 @@ Exercício 2: Somar todos os valores do array e exibir o resultado;
 
 Exercício 3: Calcular e exibir a média aritmética;
 
+Exercício 4: Usar o códido exercício anterior e determinar se a média é ou não maior que 20;
+
 
