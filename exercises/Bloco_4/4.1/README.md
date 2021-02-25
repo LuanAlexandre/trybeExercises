@@ -20,4 +20,6 @@ Exercício 3: Dessa vez o programa deve retornar o maior entre **_três_** núme
 
 Exercício 4: Dado um número exiba na tela se ele é positivo, negativo ou zero;
 
+Exercício 5: Neste exercício deve-se criar um programa que retorne se três ângulos definidos formam ou não um triângulo;
+
 
