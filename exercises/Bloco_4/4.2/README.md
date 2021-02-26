@@ -12,4 +12,6 @@ Exercício 4: Usar o códido exercício anterior e determinar se a média é ou 
 
 Exercício 5: Exibir o maior valor;
 
+Exercício 6: Contar a quantidade de números ímpares;
+
 
