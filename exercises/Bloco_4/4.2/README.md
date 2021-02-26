@@ -18,4 +18,4 @@ Exercicio 7: Exibir o menor valor;
 
 Exercício 8: Crie um array que vai de 1 a 25 e exiba cada elemento;
 
-
+Exercício 9: Exibir o resultado de cada elemento divido por **_dois_**;
