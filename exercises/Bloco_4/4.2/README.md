@@ -24,4 +24,6 @@ Exercício 9: Exibir o resultado de cada elemento divido por **_dois_**;
 
 Exercício 1: Ordenar o array **numbers** de forma crescente;
 
+Exercício 2: Ordenar o array **numbers** de forma decrescente;
+
 
