@@ -14,4 +14,6 @@ Exercício 5: Exibir o maior valor;
 
 Exercício 6: Contar a quantidade de números ímpares;
 
+Exercicio 7: Exibir o menor valor;
+
 
