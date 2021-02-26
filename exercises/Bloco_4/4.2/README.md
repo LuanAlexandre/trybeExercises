@@ -26,4 +26,4 @@ Exercício 1: Ordenar o array **numbers** de forma crescente;
 
 Exercício 2: Ordenar o array **numbers** de forma decrescente;
 
-
+Exercício 3: Deve-se criar um novo array a partir do **number**, onde "Cada valor do novo array deverá ser igual ao valor correspondente no array numbers multiplicado pelo seguinte.";
