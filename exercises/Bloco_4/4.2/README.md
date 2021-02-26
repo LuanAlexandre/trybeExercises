@@ -16,4 +16,6 @@ Exercício 6: Contar a quantidade de números ímpares;
 
 Exercicio 7: Exibir o menor valor;
 
+Exercício 8: Crie um array que vai de 1 a 25 e exiba cada elemento;
+
 
