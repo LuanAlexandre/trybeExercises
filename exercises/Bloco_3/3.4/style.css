@@ -1,4 +1,4 @@
-h1 {
+h1, body {
   text-align: center;
 }
 
@@ -24,4 +24,9 @@ h1 {
   height: 50px;
   text-align: center;
   width: 300px;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
 }
