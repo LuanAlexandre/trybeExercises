@@ -15,4 +15,8 @@ console.log(info);
 
 //Secao 3
 
+for (let i in info) {
+  console.log(i);
+}
+
 
