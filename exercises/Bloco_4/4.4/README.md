@@ -11,3 +11,5 @@ Exercícios realizados no dia 01/03/2021
 3.Exibir todas as chaves do objeto;
 
 4.Exibir o conteudo das chaves do objeto;
+
+5.Adicionar o **_Tio Patinhas_** e exibir as informacoes.

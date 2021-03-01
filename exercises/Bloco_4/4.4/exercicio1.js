@@ -28,3 +28,20 @@ for (let i in info) {
 }
 console.log();
 
+// Secao 5
+
+let info2 = {
+  personagem: "Tio Patinhas",
+  origem: "Christmas on Bear Mountain, Dells Four Color Comics #178",
+  nota: "O último MacPatinhas",
+  recorrente: 'Sim'
+}
+
+for (let i in info && info2) {
+  if (info[i] === info2[i]) {
+    console.log('Ambos ' + i + 's');
+  } else {
+    console.log(info[i] + ' e ' + info2[i]);
+  }
+}
+
