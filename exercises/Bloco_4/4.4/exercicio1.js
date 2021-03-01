@@ -12,11 +12,19 @@ console.log('Bem vinda, ' + info.personagem + '\n');
 info.recorrente = 'Sim';
 
 console.log(info);
+console.log();
 
 //Secao 3
 
 for (let i in info) {
   console.log(i);
 }
+console.log();
 
+//Secao 4
+
+for (let i in info) {
+  console.log(info[i]);
+}
+console.log();
 
