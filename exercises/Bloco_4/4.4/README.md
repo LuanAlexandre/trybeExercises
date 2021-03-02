@@ -17,3 +17,5 @@ Exercícios realizados no dia 01/03/2021
 ## Parte II - Funcoes
 
 1.Criar uma funcao que retorne se a palavra e ou nao um palindromo;
+
+2.Criar uma funcao que retorne o indice do maior numero de um array;
