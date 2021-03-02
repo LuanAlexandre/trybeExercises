@@ -23,3 +23,7 @@ Exercícios realizados no dia 01/03/2021
 3.Criar uma funcao que retorne o indice do menor numero de um array;
 
 4.Criar uma funcao que retorne a palavra com o maior numero de caracteres;
+
+5.Criar uma funcao que retorne o numero que aparece mais vezes no array;
+
+6.Criar uma funcao que dado um numero N retorne a soma de todos os inteiros de 1 ate N;

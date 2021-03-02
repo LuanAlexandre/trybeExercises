@@ -75,3 +75,30 @@ function lesserString(listOfNames) {
 
 console.log(lesserString(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
 console.log();
+
+// Secao 5 - Funcao que retorna o numero que mais aparece
+
+function mostRepeat(listOfIntegers){
+
+}
+
+console.log(mostRepeat([2, 3, 2, 5, 8, 2, 3]));
+console.log();
+
+// Secao 6  - Funcao que retorna a soma de 1 a N
+
+function sum(N) {
+  let total = 0;
+
+  for(cont = 1; cont <= N; cont += 1) {
+    total += cont;
+  }
+
+  return total;
+
+}
+
+console.log(sum(5));
+console.log();
+
+
