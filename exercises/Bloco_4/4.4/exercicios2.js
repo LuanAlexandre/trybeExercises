@@ -24,15 +24,34 @@ function indexHigherNumber(listOfIntegers) {
     number = listOfIntegers[indexListOfIntegers];
     for (indexList = 0; indexList < listOfIntegers.length; indexList += 1) {
       if(number < listOfIntegers[indexList]){
-        number = indexList;
+        indexMyHigherNumber = indexList;
       }
     }
   }
 
-  return number;
+  return indexMyHigherNumber;
 
 }
 
 console.log(indexHigherNumber([2,3,6,7,10,1]));
 console.log();
 
+// Secao 3 - Funcao que retorna o indice do menor numero de um array
+
+function indexSmallestNumber(listOfIntegers) {
+  let number;
+  for(indexListOfIntegers = 0; indexListOfIntegers < listOfIntegers.length; indexListOfIntegers += 1) {
+    number = listOfIntegers[indexListOfIntegers];
+    for (indexList = 0; indexList < listOfIntegers.length; indexList += 1) {
+      if(number > listOfIntegers[indexList]){
+        indexMySmallestNumber = indexList;
+      }
+    }
+  }
+
+  return indexMySmallestNumber;
+
+}
+
+console.log(indexSmallestNumber([2,4,6,7,10,0,-3]));
+console.log();

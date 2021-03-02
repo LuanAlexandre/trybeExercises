@@ -19,3 +19,5 @@ Exercícios realizados no dia 01/03/2021
 1.Criar uma funcao que retorne se a palavra e ou nao um palindromo;
 
 2.Criar uma funcao que retorne o indice do maior numero de um array;
+
+3.Criar uma funcao que retorne o indice do menor numero de um array;
