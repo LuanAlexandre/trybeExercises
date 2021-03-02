@@ -13,3 +13,7 @@ Exercícios realizados no dia 01/03/2021
 4.Exibir o conteudo das chaves do objeto;
 
 5.Adicionar o **_Tio Patinhas_** e exibir as informacoes.
+
+## Parte II - Funcoes
+
+1.Criar uma funcao que retorne se a palavra e ou nao um palindromo;
