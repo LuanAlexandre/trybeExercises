@@ -55,3 +55,23 @@ function indexSmallestNumber(listOfIntegers) {
 
 console.log(indexSmallestNumber([2,4,6,7,10,0,-3]));
 console.log();
+
+// Secao 4 - Funcao que retorna a string com o maior numero de caracteres
+
+function lesserString(listOfNames) {
+  let name;
+
+  for (let i=0; i < listOfNames.length; i += 1) {
+    for (let j=0; j < listOfNames.length; j += 1) {
+      if(listOfNames[i].length < listOfNames[j].length) {
+        name = listOfNames[j];
+      }
+    }
+  }
+
+  return name;
+
+}
+
+console.log(lesserString(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
+console.log();

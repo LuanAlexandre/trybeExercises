@@ -21,3 +21,5 @@ Exercícios realizados no dia 01/03/2021
 2.Criar uma funcao que retorne o indice do maior numero de um array;
 
 3.Criar uma funcao que retorne o indice do menor numero de um array;
+
+4.Criar uma funcao que retorne a palavra com o maior numero de caracteres;
