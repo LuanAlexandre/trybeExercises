@@ -27,3 +27,5 @@ Exercícios realizados no dia 01/03/2021
 5.Criar uma funcao que retorne o numero que aparece mais vezes no array;
 
 6.Criar uma funcao que dado um numero N retorne a soma de todos os inteiros de 1 ate N;
+
+7.Criar uma funcao que verifica se uma string e o final de outra.

@@ -101,4 +101,15 @@ function sum(N) {
 console.log(sum(5));
 console.log();
 
+// Secao 7 - Funcao que retorna se uma string e o final de outra
 
+function wordEndChecks(word, ending) {
+  if (word.endsWith(ending)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(wordEndChecks('trybe','be'));
+console.log(wordEndChecks('joaofernando','fernan'));
