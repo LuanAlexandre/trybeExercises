@@ -1,0 +1,1 @@
+document.querySelectorAll('p')[1].innerHTML = 'Empregado, Independencia financeira, Casa propria';
