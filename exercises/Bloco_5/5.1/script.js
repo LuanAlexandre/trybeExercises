@@ -10,6 +10,11 @@ function changeColorWhite(){
   document.getElementsByClassName('center-content')[0].style.backgroundColor = 'white';
 }
 
+function repaireText(){
+  document.getElementsByClassName('title')[0].innerHTML = 'Exercício 5.1 - JavaScript';
+}
+
 changeText();
 changeColorGreen();
 changeColorWhite();
+repaireText();
