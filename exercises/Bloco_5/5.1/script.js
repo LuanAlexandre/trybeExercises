@@ -22,17 +22,19 @@ function upperCaseText(){
   }
 }
 
-// function logText() {
-//   let centerContentList = document.getElementsByTagName('p');
+function logText() {
+  let centerContentParagraph = document.getElementsByTagName('p');
+  let print;
 
-//   for (index = 0; index < centerContentList; index += 1) {
-//     console.log(centerContentList[index].innerText);
-//   }
-// }
+  for (let index = 0; index < centerContentParagraph.length; index += 1) {
+    print = centerContentParagraph[index].innerText;
+    console.log(print);
+  }
+}
 
 changeText();
 changeColorGreen();
 changeColorWhite();
 repaireText();
 upperCaseText();
-// logText();
+logText();

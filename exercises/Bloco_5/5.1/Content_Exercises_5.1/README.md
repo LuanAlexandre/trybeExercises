@@ -10,7 +10,7 @@
 
 3.Por fim, recupere o subtítulo e altere-o também.
 
-### getElementByClassName
+### getElementByClassName e getElementsByTagName
 
 1.Adicione ao seu HTML uma classe com alguns estilos para os seus dois parágrafos.
 
@@ -19,3 +19,7 @@
 3.Altere algum estilo do primeiro deles.
 
 4.Recupere o subtítulo pela tag.
+
+### Parte III: Qual seletor usar?
+
+Preencher as cores afim de parecer com o Administrador de tempo da trybe.
