@@ -11,8 +11,8 @@ Aqui você vai modificar os elementos já existentes utilizando apenas as funç�
  
 3.Crie uma função que mude a cor do quadrado vermelho para branco;
  
-4.Crie uma função que corrija o texto da tag <h1>;
+4.Crie uma função que corrija o texto da tag **h1**;
  
-5.Crie uma função que modifique todo o texto da tag <p> para maiúsculo;
+5.Crie uma função que modifique todo o texto da tag **p** para maiúsculo;
  
-6.Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+6.Crie uma função que exiba o conteúdo de todas as tags **<p>** no console.
