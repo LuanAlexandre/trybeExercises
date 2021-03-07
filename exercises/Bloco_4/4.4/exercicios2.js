@@ -79,7 +79,17 @@ console.log();
 // Secao 5 - Funcao que retorna o numero que mais aparece
 
 function mostRepeat(listOfIntegers){
+  let number;
+  let cont = 0;
 
+  for (i = 0; i < listOfIntegers.length; i += 1) {
+    number = listOfIntegers[i];
+    for (j = 0; j < listOfIntegers.length; j += 1) {
+      if (listOfIntegers[i] === listOfIntegers[j]) {
+        cont += 1;
+      }
+    }
+  }
 }
 
 console.log(mostRepeat([2, 3, 2, 5, 8, 2, 3]));
