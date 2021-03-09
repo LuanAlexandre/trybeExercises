@@ -26,3 +26,7 @@
 3.Crie um **filho** para **primeiroFilhoDoFilho**.
 
 4.A partir desse filho criado, acesse **terceiroFilho**.
+
+### Parte III - Removendo elementos:
+
+Remova todos os elementos da página, menos **pai** , **elementoOndeVoceEsta** e **primeiroFilhoDoFilho**.

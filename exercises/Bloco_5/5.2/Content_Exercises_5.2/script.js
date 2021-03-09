@@ -39,3 +39,11 @@ document.getElementById('primeiroFilhoDoFilho').appendChild(primeiroFilhoDoFilho
 // 4.A partir desse filho criado, acesse terceiroFilho.
 primeiroFilhoDoFilhoChild.className = 'test';
 document.getElementsByClassName('test')[0].parentNode.parentNode.nextElementSibling;
+
+// Parte III:
+document.getElementById('segundoEUltimoFilhoDoFilho').remove();
+document.getElementById('elementoOndeVoceEsta').children[1].remove();
+document.getElementById('primeiroFilho').remove();
+document.getElementById('terceiroFilho').remove();
+document.getElementById('quartoEUltimoFilho').remove();
+document.getElementById('pai').children[1].remove();
