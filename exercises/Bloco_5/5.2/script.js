@@ -74,3 +74,10 @@ for (let index = 0; index < 10; index += 1) {
       console.log('Error!');
   }
 }
+
+// Passo 9
+for (let index = 0; index < 3; index += 1) {
+  let moreChildren = document.createElement('h3');
+
+  document.querySelector('.main-content').appendChild(moreChildren);
+}
