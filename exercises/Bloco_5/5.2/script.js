@@ -97,3 +97,6 @@ childrenLeftContent.removeChild(document.querySelector('.left-content'));
 
 // Passo 13
 document.querySelector('.right-content').style.marginRight = 'auto';
+
+// Passo 14
+document.querySelector('.center-content').parentNode.style.backgroundColor = 'green';
