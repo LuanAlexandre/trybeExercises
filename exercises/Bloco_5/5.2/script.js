@@ -4,3 +4,6 @@ document.body.appendChild(title);
 
 let firstChildBody = document.createElement('div');
 document.body.appendChild(firstChildBody).className = 'main-content';
+
+let centerContent = document.createElement('div');
+document.querySelector('div').appendChild(centerContent).className = 'center-content';
