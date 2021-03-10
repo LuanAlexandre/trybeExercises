@@ -18,7 +18,7 @@
 
 8.Adicione uma lista não ordenada com os valores de 1 a 10 por extenso como valores da lista. Essa lista deve ser filha do div criado no passo 6;
 
-8.Adicione 3 tags h3 , todas sendo filhas do div criado no passo 2.
+9.Adicione 3 tags h3 , todas sendo filhas do div criado no passo 2.
 
 ### Alterando e/ou removendo:
 
