@@ -84,3 +84,8 @@ for (let index = 0; index < 3; index += 1) {
 
 // Passo 10
 document.querySelector('h1').className = 'title';
+
+// Passo 11
+for (let index = 0; index < 3; index += 1) {
+  document.querySelectorAll('h3')[index].className = 'description';
+}
