@@ -100,3 +100,9 @@ document.querySelector('.right-content').style.marginRight = 'auto';
 
 // Passo 14
 document.querySelector('.center-content').parentNode.style.backgroundColor = 'green';
+
+// Passo 15
+let removeList = document.getElementsByTagName('li');
+
+removeList[8].remove();
+removeList[8].remove();
