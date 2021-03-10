@@ -18,3 +18,7 @@ document.querySelector('.center-content').appendChild(paragraph).innerText = 'Pi
 // Passo 5
 let left = document.createElement('div');
 document.querySelector('.main-content').appendChild(left).className = 'left-content';
+
+// Passo 6
+let right = document.createElement('div');
+document.querySelector('.main-content').appendChild(right).className = 'right-content';
