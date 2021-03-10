@@ -94,3 +94,6 @@ for (let index = 0; index < 3; index += 1) {
 let childrenLeftContent = document.querySelector('.main-content');
 
 childrenLeftContent.removeChild(document.querySelector('.left-content'));
+
+// Passo 13
+document.querySelector('.right-content').style.marginRight = 'auto';
