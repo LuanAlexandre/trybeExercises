@@ -81,3 +81,6 @@ for (let index = 0; index < 3; index += 1) {
 
   document.querySelector('.main-content').appendChild(moreChildren);
 }
+
+// Passo 10
+document.querySelector('h1').className = 'title';
