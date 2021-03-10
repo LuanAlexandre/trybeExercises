@@ -22,3 +22,8 @@ document.querySelector('.main-content').appendChild(left).className = 'left-cont
 // Passo 6
 let right = document.createElement('div');
 document.querySelector('.main-content').appendChild(right).className = 'right-content';
+
+// Passo 7
+let img = document.createElement('img');
+document.querySelector('.left-content').appendChild(img).className = 'small-image';
+img.src = 'https://picsum.photos/200';
