@@ -26,7 +26,7 @@
 
 11.Adicione a classe description nas 3 tags h3 criadas;
 
-12.Remova o div criado no passo 5 (aquele que possui a classe left-content). Utilize a função .removeChild();
+12.Remova o div criado no passo 5 (aquele que possui a classe left-content). Utilize a função.removeChild();
 
 13.Centralize o div criado no passo 6 (aquele que possui a classe right-content). Dica: para centralizar, basta configurar o margin-right: auto do div;
 
