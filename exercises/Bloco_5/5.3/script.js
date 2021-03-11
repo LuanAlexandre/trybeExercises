@@ -67,6 +67,15 @@ function changeColorButtonHoliday() {
   buttonHoliday.addEventListener('click', checkHolidayColor);
 }
 
+// Exercicio 4
+function createButtonFriday(strFriday) {
+  const sextas = document.createElement('button');
+
+  document.querySelector('.buttons-container').appendChild(sextas).id = 'btn-friday';
+  document.getElementById('btn-friday').innerText = strFriday;
+}
+
 createDays();
 createButtonHoliday('Feriados');
 changeColorButtonHoliday();
+createButtonFriday('Sexta-feira');
