@@ -28,7 +28,7 @@ function createDays() {
       days.children[index].classList.add('holiday');
     }
 
-    if (index === 5 || index === 12 || index === 19 || index === 27) {
+    if (index === 5 || index === 12 || index === 19 || index === 26) {
       days.children[index].classList.add('friday');
     }
   }
@@ -75,7 +75,39 @@ function createButtonFriday(strFriday) {
   document.getElementById('btn-friday').innerText = strFriday;
 }
 
+// Exercicio 5
+function checkFridayText() {
+  const fridayList = document.getElementsByClassName('friday');
+  const newText = 'Sexta-feira';
+  // let fridayDays = [];
+
+  // for (let index = 0; index < fridayList.length; index += 1) {
+  //   fridayDays.push(fridayList[index].innerText);
+  // }
+
+  let numberDay = 4;
+
+  for (let index = 0; index < fridayList.length; index += 1) {
+    let element = fridayList[index];
+
+    if (element.innerText === newText) {
+      element.innerText = numberDay;
+    } else  {
+      element.innerText = newText;
+    }
+
+    numberDay += 7;
+  }
+}
+
+function changeTextFriday() {
+  const buttonFriday = document.getElementById('btn-friday');
+  buttonFriday.addEventListener('click', checkFridayText);
+}
+
 createDays();
 createButtonHoliday('Feriados');
 changeColorButtonHoliday();
 createButtonFriday('Sexta-feira');
+changeTextFriday();
+
