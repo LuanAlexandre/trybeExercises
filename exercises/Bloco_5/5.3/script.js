@@ -14,19 +14,31 @@ function createDaysOfTheWeek() {
 createDaysOfTheWeek();
 
 // Escreva seu código abaixo.
-const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
-for (let index = 0; index < dezDaysList.length; index += 1) {
-  let day = document.createElement('li');
-  const days = document.getElementById('days');
+function createDays() {
+  const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+  for (let index = 0; index < dezDaysList.length; index += 1) {
+    let day = document.createElement('li');
+    const days = document.getElementById('days');
 
-  days.appendChild(day).className = 'day';
-  days.children[index].innerHTML = dezDaysList[index];
+    days.appendChild(day).className = 'day';
+    days.children[index].innerHTML = dezDaysList[index];
 
-  if (index === 25 || index === 26 || index === 32) {
-    days.children[index].classList.add('holiday');
-  }
+    if (index === 25 || index === 26 || index === 32) {
+      days.children[index].classList.add('holiday');
+    }
 
-  if (index === 5 || index === 12 || index === 19 || index === 27) {
-    days.children[index].classList.add('friday');
+    if (index === 5 || index === 12 || index === 19 || index === 27) {
+      days.children[index].classList.add('friday');
+    }
   }
 }
+
+function createButtonHoliday(str) {
+  const feriados = document.createElement('button');
+
+  document.querySelector('.buttons-container').appendChild(feriados).id = 'btn-holiday';
+  document.getElementById('btn-holiday').innerText = str;
+}
+
+createDays();
+createButtonHoliday('Feriados');
