@@ -14,6 +14,7 @@ function createDaysOfTheWeek() {
 createDaysOfTheWeek();
 
 // Escreva seu código abaixo.
+// Exercicio 1
 function createDays() {
   const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
   for (let index = 0; index < dezDaysList.length; index += 1) {
@@ -33,12 +34,39 @@ function createDays() {
   }
 }
 
-function createButtonHoliday(str) {
+// Exercicio 2
+function createButtonHoliday(strHoliday) {
   const feriados = document.createElement('button');
 
   document.querySelector('.buttons-container').appendChild(feriados).id = 'btn-holiday';
-  document.getElementById('btn-holiday').innerText = str;
+  document.getElementById('btn-holiday').innerText = strHoliday;
+}
+
+// Exercicio 3
+function checkHolidayColor() {
+  const holidayList = document.getElementsByClassName('holiday');
+  const defaultColor = 'rgb(238,238,238)';
+  const newColor = 'gold';
+
+  for (let index = 0; index < holidayList.length; index += 1) {
+    let element = holidayList[index];
+
+    //Essa estrutura condicional foi baseada no código do Lucas Pedroso, disponível neste link abaixo
+    //https://github.com/LucasPedroso/trybe-exercises/pull/16/commits/ecbada6986c065c9746447d93def9c6f74830d34
+    //O código dele me deu muita luz para o que eu queria fazer, thank you sou much!!
+    if (element.style.backgroundColor === newColor) {
+      element.style.backgroundColor = defaultColor;
+    } else {
+      element.style.backgroundColor = newColor;
+    }
+  }
+}
+
+function changeColorButtonHoliday() {
+  const buttonHoliday = document.getElementById('btn-holiday');
+  buttonHoliday.addEventListener('click', checkHolidayColor);
 }
 
 createDays();
 createButtonHoliday('Feriados');
+changeColorButtonHoliday();
