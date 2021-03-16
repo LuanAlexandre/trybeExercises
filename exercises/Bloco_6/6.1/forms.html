@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="" method="get">
+    <fieldset>
+      Name: <input type="text" name="input-name" id="input-name" maxlength="40" required>
+      <br>
+      E-mail: <input type="email" name="input-email" id="input-email" maxlength="50" required>
+      <br>
+      CPF: <input type="text" name="input-cpf" id="input-cpf" maxlength="11" required>
+      <br>
+      Adress: <input type="text" name="input-adress" id="input-adress" maxlength="200" required>
+      <br>
+      City: <input type="text" name="input-city" id="input-city" maxlength="28" required>
+      <br>
+      State: <select name="choose-state" id="choose-state"></select>
+      <br>
+      Type:
+      <label for="type-home-house">
+        <input type="radio" name="type-home" id="type-home-house" required>Casa
+      </label>
+      <label for="type-home-apartment">
+        <input type="radio" name="type-home" id="type-home-apartment" required>Apartamento
+      </label>
+    </fieldset>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>
