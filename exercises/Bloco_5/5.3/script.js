@@ -34,6 +34,8 @@ function createDays() {
   }
 }
 
+createDays();
+
 // Exercicio 2
 function createButtonHoliday(strHoliday) {
   const feriados = document.createElement('button');
@@ -41,6 +43,8 @@ function createButtonHoliday(strHoliday) {
   document.querySelector('.buttons-container').appendChild(feriados).id = 'btn-holiday';
   document.getElementById('btn-holiday').innerText = strHoliday;
 }
+
+createButtonHoliday('Feriados');
 
 // Exercicio 3
 function checkHolidayColor() {
@@ -67,6 +71,8 @@ function changeColorButtonHoliday() {
   buttonHoliday.addEventListener('click', checkHolidayColor);
 }
 
+changeColorButtonHoliday();
+
 // Exercicio 4
 function createButtonFriday(strFriday) {
   const sextas = document.createElement('button');
@@ -74,6 +80,8 @@ function createButtonFriday(strFriday) {
   document.querySelector('.buttons-container').appendChild(sextas).id = 'btn-friday';
   document.getElementById('btn-friday').innerText = strFriday;
 }
+
+createButtonFriday('Sexta-feira');
 
 // Exercicio 5
 function checkFridayText() {
@@ -105,9 +113,47 @@ function changeTextFriday() {
   buttonFriday.addEventListener('click', checkFridayText);
 }
 
-createDays();
-createButtonHoliday('Feriados');
-changeColorButtonHoliday();
-createButtonFriday('Sexta-feira');
 changeTextFriday();
 
+// Exercicio 6
+const daysList = document.getElementsByClassName('day');
+
+function zoomIn(dayElement) {
+  for (let index = 0; index < daysList.length; index += 1) {
+    const element = daysList[index];
+
+    if (dayElement.target === element) {
+      element.style.fontSize = '30px';
+    }
+  }
+}
+
+function addEventZoomIn() {
+  for (let index = 0; index < daysList.length; index += 1) {
+    const element = daysList[index];
+
+    element.addEventListener('mouseover', zoomIn);
+  }
+}
+
+addEventZoomIn();
+
+function zoomOut(dayElement) {
+  for (let index = 0; index < daysList.length; index += 1) {
+    const element = daysList[index];
+
+    if (dayElement.target === element) {
+      element.style.fontSize = '20px';
+    }
+  }
+}
+
+function addEventZoomOut() {
+  for (let index = 0; index < daysList.length; index += 1) {
+    const element = daysList[index];
+
+    element.addEventListener('mouseout', zoomOut);
+  }
+}
+
+addEventZoomOut();
