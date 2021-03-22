@@ -164,6 +164,21 @@ function createTask(nameTask) {
   const newTask = document.createElement('span');
 
   document.querySelector('.my-tasks').appendChild(newTask).innerText = nameTask;
+
 }
 
 createTask('Go to the gym');
+
+// Exercicio 8
+function colorTask(colorSubtitle) {
+  const subtitle = document.createElement('div');
+  const myTask = document.querySelector('.my-tasks');
+
+  myTask.appendChild(subtitle).className = 'task';
+
+  const task = document.querySelector('.task');
+
+  task.style.backgroundColor = colorSubtitle;
+}
+
+colorTask('gold');
