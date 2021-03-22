@@ -123,7 +123,7 @@ function zoomIn(dayElement) {
     const element = daysList[index];
 
     if (dayElement.target === element) {
-      element.style.fontSize = '30px';
+      element.style.fontSize = '25px';
     }
   }
 }
@@ -157,3 +157,13 @@ function addEventZoomOut() {
 }
 
 addEventZoomOut();
+
+// Exercicio 7
+
+function createTask(nameTask) {
+  const newTask = document.createElement('span');
+
+  document.querySelector('.my-tasks').appendChild(newTask).innerText = nameTask;
+}
+
+createTask('Go to the gym');
