@@ -29,3 +29,12 @@ Exercícios realizados no dia 01/03/2021
 6.Criar uma funcao que dado um numero N retorne a soma de todos os inteiros de 1 ate N;
 
 7.Criar uma funcao que verifica se uma string e o final de outra.
+
+## Bônus
+
+1. (Difícil) Faça um programa que receba uma string em algarismos romanos e retorne o número que a string representa.
+
+Atenção! Esse exercício já apareceu no processo seletivo de uma grande multinacional!
+
+Dicas: Uma string é um array de caracteres, então cada elemento do array é uma letra.
+
