@@ -14,7 +14,7 @@
 
 1.Adicione ao seu HTML uma classe com alguns estilos para os seus dois parágrafos.
 
-2.Recupere os seus parágrafos via código JavaScript , usando a função getElementsByClassName ;
+2.Recupere os seus parágrafos via código JavaScript, usando a função getElementsByClassName;
 
 3.Altere algum estilo do primeiro deles.
 
