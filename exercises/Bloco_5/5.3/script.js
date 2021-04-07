@@ -182,3 +182,17 @@ function colorTask(colorSubtitle) {
 }
 
 colorTask('gold');
+
+// Exercicio 9
+function taskSelector() {
+  const tasks = document.getElementsByClassName('task');
+  for (let index = 0; index < tasks.length; index += 1) {
+    const element = tasks[index];
+    element.addEventListener('click', (event) => {
+      event.target.classList.toggle('task-selected');
+      event.target.classList.toggle('task');
+    });
+  }
+}
+
+taskSelector();
