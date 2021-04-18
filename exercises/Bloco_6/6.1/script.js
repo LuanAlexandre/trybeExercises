@@ -18,3 +18,21 @@ function addOption() {
     element[index].innerText = statesList[index][1];
   }
 }
+
+function checkDateFormat() {
+  const btnSubmit = document.getElementById('btn-submit');
+  btnSubmit.addEventListener('click', () => {
+    const dateValue = document.getElementById('date').value;
+    const date = dateValue.split('/');
+    
+    if (date[0] <= 0 || date[0] > 31 ) {
+      alert('Invalid format of day');
+    } else if (date[1] <= 0 || date[1] > 12) {
+      alert('Invalid format of month');
+    } else if (date[3] <= 0) {
+      alert('Invalida format of year');
+    }
+  });
+}
+
+checkDateFormat();
