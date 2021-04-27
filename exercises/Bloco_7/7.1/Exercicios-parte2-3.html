@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clicks count</title>
+</head>
+<body>
+
+  <button>Count</button>
+
+  <span id="show-count" style="border: 1px solid blue;">0</span>
+
+  <script>
+    let clickCount = 0;
+
+    const btnCount = document.querySelector('button');
+    btnCount.addEventListener('click', showCount);
+
+    function showCount() {
+      const showCount = document.getElementById('show-count');
+      clickCount += 1;
+      showCount.innerText = clickCount;
+    }
+
+  </script>
+</body>
+</html>
