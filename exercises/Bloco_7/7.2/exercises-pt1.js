@@ -48,9 +48,17 @@ const customerInfo = (order) => {
 
 customerInfo(order);
 
+order.name = 'Renata Liandra';
+order.payment = 50;
+
 const orderModifier = (order) => {
   // Adicione abaixo as informações necessárias.
+  const name = order.name;
+  const foodOrder = Object.keys(order.order.pizza);
+  const drinkOrder = Object.keys(order.order.drinks);
+  const totalPayment = order.payment;
 
+  console.log(`Olá ${name}, o total do seu pedido de ${foodOrder[0]}, ${foodOrder[1]} e ${drinkOrder} é R$ ${totalPayment}.`);
 }
 
 orderModifier(order);
