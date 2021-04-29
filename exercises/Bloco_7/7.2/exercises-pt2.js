@@ -18,8 +18,16 @@ const lesson3 = {
   turno: 'noite',
 };
 
+// Exercicio 1
 function changeShift(object, key, value) {
   object[key] = value;
 }
 
 changeShift(lesson2, 'turno', 'manhã');
+
+// Exercicio 2
+function showKeys(object) {
+  return Object.keys(object);
+}
+
+console.log(showKeys(lesson1));
