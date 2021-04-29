@@ -74,4 +74,19 @@ function getValueByNumber(object, keyNumber) {
   console.log(objectValues[keyNumber]);
 }
 
-getValueByNumber(lesson1, 0);
+// getValueByNumber(lesson1, 0);
+
+// Exercicio 8
+function verifyPair(object, key, value) {
+  const objectPair = Object.entries(object);
+  
+  for(let pair in objectPair) {
+
+    if (objectPair[pair][0] === key && objectPair[pair][1] === value) return true;
+
+  }
+  return false;
+}
+
+console.log(verifyPair(lesson3, 'turno', 'noite'));
+console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
