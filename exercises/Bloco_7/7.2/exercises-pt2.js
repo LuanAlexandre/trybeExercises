@@ -51,3 +51,8 @@ function showValues(object) {
 // showValues(lesson1);
 // showValues(lesson2);
 // showValues(lesson3);
+
+// Exercicio 5
+const allLessons = {};
+Object.assign(allLessons, {lesson1}, {lesson2}, {lesson3});
+console.log(allLessons);
