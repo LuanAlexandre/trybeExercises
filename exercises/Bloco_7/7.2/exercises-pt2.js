@@ -56,3 +56,13 @@ function showValues(object) {
 const allLessons = {};
 Object.assign(allLessons, {lesson1}, {lesson2}, {lesson3});
 console.log(allLessons);
+console.log();
+
+// Exercicio 6
+function countStudents() {
+  const quantityStudents = lesson1.numeroEstudantes + lesson2.numeroEstudantes + lesson3.numeroEstudantes;
+
+  return quantityStudents;
+}
+
+console.log(`Total of students: ${countStudents()}`);
