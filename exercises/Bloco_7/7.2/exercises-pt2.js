@@ -66,3 +66,12 @@ function countStudents() {
 }
 
 console.log(`Total of students: ${countStudents()}`);
+console.log();
+
+// Exercicio 7
+function getValueByNumber(object, keyNumber) {
+  const objectValues = Object.values(object);
+  console.log(objectValues[keyNumber]);
+}
+
+getValueByNumber(lesson1, 0);
