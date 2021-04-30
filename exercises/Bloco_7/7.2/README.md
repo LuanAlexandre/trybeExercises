@@ -1,6 +1,6 @@
 ## Instruções dos exercícios de prática:
 
-## Parte I:
+### Parte I:
 
 1. Complete a função `customerInfo()` para que seu retorno seja similar a "Olá Ana Silveira, entrega para: Rafael Andrade, Telefone: 11-98763-1416, R. Rua das Flores, Nº: 389, AP: 701".
 
@@ -11,7 +11,7 @@
  - Modifique o nome da pessoa compradora.
  - Modifique o valor total da compra para R$ 50,00.
 
-## Parte II:
+### Parte II:
 
 1. Crie uma função para adicionar o turno da manhã na `lesson2`. Essa função deve possuir três parâmetros, sendo eles: o objeto a ser modificado, a chave que deverá ser adicionada e o valor dela.
 
@@ -64,3 +64,17 @@ Exemplo:
     // Output: true,
     console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
     // Output: false
+
+###
+1. Crie uma função para contar quantos estudantes assistiram às aulas de Matemática. Use o objeto criado no exercício 5.
+
+2. Crie uma função que deverá retornar um objeto que representa o relatório do professor ou professora, as aulas que ele ou ela ministrou e o número total de estudantes. Use o objeto criado no exercício 5:
+
+```
+console.log(createReport(allLessons, 'Maria Clara'))
+/* {
+  professor: 'Maria Clara',
+  aulas: [ 'Matemática', 'Matemática' ],
+  estudantes: 30
+} */
+```
