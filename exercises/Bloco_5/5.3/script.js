@@ -50,7 +50,7 @@ createButtonHoliday('Feriados');
 function checkHolidayColor() {
   const holidayList = document.getElementsByClassName('holiday');
   const defaultColor = 'rgb(238,238,238)';
-  const newColor = 'gold';
+  const newColor = 'lightblue';
 
   for (let index = 0; index < holidayList.length; index += 1) {
     let element = holidayList[index];
@@ -87,11 +87,6 @@ createButtonFriday('Sexta-feira');
 function checkFridayText() {
   const fridayList = document.getElementsByClassName('friday');
   const newText = 'Sexta-feira';
-  // let fridayDays = [];
-
-  // for (let index = 0; index < fridayList.length; index += 1) {
-  //   fridayDays.push(fridayList[index].innerText);
-  // }
 
   let numberDay = 4;
 
@@ -183,6 +178,8 @@ function colorTask(colorSubtitle) {
 
 colorTask('gold');
 
+let getTaskColor = '#eee';
+
 // Exercicio 9
 function taskSelector() {
   const tasks = document.getElementsByClassName('task');
@@ -190,9 +187,23 @@ function taskSelector() {
     const element = tasks[index];
     element.addEventListener('click', (event) => {
       event.target.classList.toggle('task-selected');
-      event.target.classList.toggle('task');
+      if (event.target.className.includes('task-selected')) getTaskColor = event.target.style.backgroundColor;
     });
   }
 }
 
 taskSelector();
+
+// Exercicio 10
+function changeColorDay() {
+  const daysOfMonth = document.getElementsByClassName('day');
+  for (let index = 0; index < daysOfMonth.length; index += 1) {
+    const element = daysOfMonth[index];
+    element.addEventListener('click', (event) => {
+      if (event.target.style.backgroundColor === getTaskColor) event.target.style.backgroundColor = '#eee';
+      else event.target.style.backgroundColor = getTaskColor;
+    });
+  }
+}
+
+changeColorDay();
