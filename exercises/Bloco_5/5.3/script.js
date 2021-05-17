@@ -207,3 +207,40 @@ function changeColorDay() {
 }
 
 changeColorDay();
+
+// Exercicio Bonus
+function addNewTaskToList() {
+  const btnAdd = document.getElementById('btn-add');
+  const taskName = document.getElementById('task-input');
+  btnAdd.addEventListener('click', () => {
+    if (taskName.value !== '') {
+      const newTask = document.createElement('span');
+      const lineBreak = document.createElement('br');
+      document.querySelector('.my-tasks').appendChild(lineBreak);
+      document.querySelector('.my-tasks').appendChild(newTask).innerText = taskName.value;
+      taskName.value = '';
+    } else {
+      alert('Error! Empty Field!');
+    }
+  });
+}
+
+function addNewTaskToListEnter() {
+  const taskName = document.getElementById('task-input');
+  taskName.addEventListener('keypress', (e) => {
+    if (e.which === 13) {
+      if (taskName.value !== '') {
+        const newTask = document.createElement('span');
+        const lineBreak = document.createElement('br');
+        document.querySelector('.my-tasks').appendChild(lineBreak);
+        document.querySelector('.my-tasks').appendChild(newTask).innerText = taskName.value;
+        taskName.value = '';
+      } else {
+        alert('Error! Empty Field!');
+      }
+    }
+  });
+}
+
+addNewTaskToList();
+addNewTaskToListEnter();
