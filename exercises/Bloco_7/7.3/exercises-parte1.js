@@ -17,7 +17,11 @@ const test2 = sum(0, 0);
 assert.strictEqual(test1, 9, `4 + 5 = 9`);
 assert.strictEqual(test2, 0, `0 + 0 = 0`);
 assert.strictEqual(sum(4, '5'), 9);
-assert.throws(() => sum(4, '5'), `'parameters must be numbers'`);
+/*
+Retirado do gabarito, mas não entendi o que faz realmente ou se tem necessidade da fazê-lo
+assert.throws(() => {sum(4, '5');});
+*/
+assert.throws(() => {sum(4, '5');}, `'parameters must be numbers'`);
 
 // Exercicio 2
 const assert = require('assert');
@@ -59,9 +63,11 @@ function myRemoveWithoutCopy(arr, item) {
 // implemente seus testes aqui
 assert.deepStrictEqual(myRemoveWithoutCopy([1, 2, 3, 4], 3), [1, 2, 4]);
 assert.notDeepStrictEqual(myRemoveWithoutCopy([1, 2, 3, 4], 3), [1, 2, 3, 4]);
+
 const listToChange = [0, 2, 4, 6, 8];
 myRemoveWithoutCopy(listToChange, 4);
 assert.deepStrictEqual(listToChange, [0, 2, 4, 6, 8]);
+
 assert.deepStrictEqual(myRemoveWithoutCopy([1, 2, 3, 4], 5), [1, 2, 3, 4]);
 
 // Exercicio 4
