@@ -5,8 +5,7 @@ function getChange(payable, paid) {
   let remaining = paid - payable;
 
   // escreva seu código aqui...
-  if (remaining === 0) return change;
-  else if (remaining < 0) throw new Error('paid value is not enough');
+  if (remaining < 0) throw new Error('paid value is not enough');
   else {
     while (remaining > 0) {
       if (remaining >= coins[0]) {
