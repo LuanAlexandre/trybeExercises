@@ -29,8 +29,15 @@ const people = [
 ];
 
 // escreva filterPeople abaixo
+function filterPeople(persons) {
+  return persons.filter((person) => {
+    const {bornIn, nationality} = person;
+    if(bornIn < 2000 && nationality === 'Australian') return person;
+  });
+}
 
 const filteredPeople = filterPeople(people);
 
 assert.deepStrictEqual(filteredPeople[0], { name: 'Nicole', bornIn: 1992, nationality: 'Australian' });
 assert.deepStrictEqual(filteredPeople[1], { name: 'Toby', bornIn: 1901, nationality: 'Australian' });
+;
