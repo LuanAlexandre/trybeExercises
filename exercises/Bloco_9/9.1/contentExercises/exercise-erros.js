@@ -5,7 +5,7 @@ const delay = (maxMilliseconds = 5000) => Math.floor(Math.random() * maxMillisec
 
 const printErrorMessage = (error) => console.log(`Error getting country: ${error}`);
 
-const getCountry = (onSuccess) => {
+const getCountry = (onSuccess, onFail) => {
   setTimeout(() => {
     const didOperationSucceed = Math.random() >= 0.5;
     if(didOperationSucceed) {
@@ -18,12 +18,15 @@ const getCountry = (onSuccess) => {
     }
     else {
       const errorMessage = "Country could not be found";
+      onFail(errorMessage);
     }
   }, delay());
 };
 
-// Deve imprimir "Returned country is Brazil" no sucesso, ou "Error getting country: Country could not be found" em falha
+/* Deve imprimir "Returned country is Brazil" no sucesso,
+ ou "Error getting country: Country could not be found" em falha */
 getCountry(countryName, printErrorMessage);
 
-// Deve imprimir "Brazil's currency is the Real" no sucesso, ou "Error getting country: Country could not be found" em falha
+/* Deve imprimir "Brazil's currency is the Real" no sucesso,
+ ou "Error getting country: Country could not be found" em falha */
 getCountry(countryCurrency, printErrorMessage);
