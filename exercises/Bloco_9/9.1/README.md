@@ -2,9 +2,9 @@
 
 #### O template de cada exercício será adicionado em seu respectivo arquivo
 
-1. Dado o código no arquivo **exercise1.js**, qual a ordem de finalização de execução das linhas comentadas?
+1. Dado o código no arquivo [exercise1.js](https://github.com/LuanAlexandre/trybeExercises/blob/master/exercises/Bloco_9/9.1/exercise1.js), qual a ordem de finalização de execução das linhas comentadas?
 
-2. Agora, dado o código no arquivo **exercise2.js**, qual a ordem de finalização de execução das linhas comentadas?
+2. Agora, dado o código no arquivo [exercise2](https://github.com/LuanAlexandre/trybeExercises/blob/master/exercises/Bloco_9/9.1/exercise2.js).js, qual a ordem de finalização de execução das linhas comentadas?
 
 3. A função **getPlanet** abaixo imprime o planeta Marte de forma síncrona. Modifique **getPlanet** , de forma que Marte seja impresso assincronamente, depois de 4 segundos.
 
