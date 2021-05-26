@@ -28,3 +28,5 @@ const jupiter = {
 console.log(planetDistanceFromSun(mars)); // A
 console.log(planetDistanceFromSun(venus)); // B
 console.log(planetDistanceFromSun(jupiter)); // C
+
+// As funções serão executadas na mesma ordem em que aparecem A, B e C
