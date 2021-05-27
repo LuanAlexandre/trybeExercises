@@ -12,4 +12,4 @@ const fetchNumbers = new Promise((resolve, reject) => {
   resolve(sum);
 })
 .then((divisions) => [divisions/2, divisions/3, divisions/5, divisions/10])
-.catch(() => console.log(`Promise rejeitada`));
+.catch(() => console.log(`É mais de oito mil! Essa promise deve estar quebrada!`));
