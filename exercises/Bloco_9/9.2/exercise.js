@@ -9,7 +9,7 @@ const fetchNumbers = new Promise((resolve, reject) => {
     sum += number*number;
   }
   if (sum >= 8000) return reject(sum);
-  resolve(sum);
+  resolve([sum/2, sum/3, sum/5, sum/10]);
 })
-.then((divisions) => [divisions/2, divisions/3, divisions/5, divisions/10])
+.then(() => console.log(`Promise resolvida`))
 .catch(() => console.log(`É mais de oito mil! Essa promise deve estar quebrada!`));
