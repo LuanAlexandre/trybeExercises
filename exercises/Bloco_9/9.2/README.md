@@ -14,7 +14,7 @@
 
 Utilize o *`HTML`* e o `js` a seguir como base:
 
-´´´html
+```html
 <!-- jokes.html -->
 <!DOCTYPE html>
 <html>
@@ -27,9 +27,9 @@ Utilize o *`HTML`* e o `js` a seguir como base:
     <h2 id="jokeContainer"></h2>
   </body>
 </html>
-´´´
+```
 
-´´´javascript
+```javascript
 // apiScript.js
 const API_URL = 'https://icanhazdadjoke.com/';
 
@@ -38,7 +38,7 @@ const fetchJoke = () => {
 };
 
 window.onload = () => fetchJoke();
-´´´
+```
 
  * Agora vamos tentar fazer as requisições a *API* usando `fetch`. Essa função recebe dois parâmetros:
 
@@ -46,7 +46,7 @@ window.onload = () => fetchJoke();
 
   2. Um objeto contendo as especificações da requisição. Para essa *API*, atribuiremos a esse objeto as chaves `method` e `headers`.
 
-´´´javascript
+```javascript
 // apiScript.js     
 const API_URL = 'https://icanhazdadjoke.com/';
 
@@ -60,13 +60,13 @@ const fetchJoke = () => {
 };
 
 window.onload = () => fetchJoke();
-´´´
+```
 
 O segundo parâmetro `myObject` define o tipo de request `method: 'GET'` e o formato da resposta `headers: { 'Accept': 'application/json' }` , como visto nas requisições via `curl`.
 
  * A função `fetch` **é uma Promise** e, como tal, dependendo de seus desdobramentos, podemos encadear procedimentos a serem feitos, utilizando as cláusulas `.then` (em caso de sucesso) e `.catch` (em caso de falha). A requisição `fetch` retorna um objeto *Response*. Utilizando `.then` , verifique a estrutura da resposta usando um `console.log` na `response` retornada pelo `fetch` .
 
-´´´javascript
+```javascript
 // apiScript.js     
 const API_URL = 'https://icanhazdadjoke.com/';
 
@@ -81,7 +81,7 @@ const fetchJoke = () => {
 };
 
 window.onload = () => fetchJoke();
-´´´
+```
 
  * Viu a response? Até recebemos uma resposta do serviço, mas como é que eu consigo retirar o texto da piada daí 🤔?
 
@@ -89,7 +89,7 @@ Para isso, usamos o método `.json()` na resposta da *API* . Esse método conver
 
 A partir do `fetch` , troque o `console.log()` anterior pelo método `.json()` e imprima os dados da requisição.
 
-´´´javascript
+```javascript
 // apiScript.js     
 const API_URL = 'https://icanhazdadjoke.com/';
 
@@ -105,7 +105,7 @@ const fetchJoke = () => {
 };
 
 window.onload = () => fetchJoke();
-´´´
+```
 
  * Recebemos um objeto, certo? A partir daí, faça a piada aparecer no DOM da sua página!
 
