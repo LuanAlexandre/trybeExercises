@@ -11,5 +11,5 @@ const fetchNumbers = new Promise((resolve, reject) => {
   if (sum >= 8000) return reject(sum);
   resolve(sum);
 })
-.then(() => console.log(`Promise resolvida`))
+.then((divisions) => [divisions/2, divisions/3, divisions/5, divisions/10])
 .catch(() => console.log(`Promise rejeitada`));
