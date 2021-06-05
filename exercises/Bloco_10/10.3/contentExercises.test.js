@@ -2,9 +2,10 @@ const math = require('./contentExercises');
 
 describe('arithmetic operations', () => {
   it('call of minus', () => {
-    math.subtrair = jest.fn();
+    math.subtrair = jest.spyOn(math, 'subtrair');
     math.subtrair();
     expect(math.subtrair).toHaveBeenCalled();
+    math.subtrair.mockRestore();
   });
 
   it('multiply operation', () => {
@@ -45,6 +46,20 @@ describe('arithmetic operations', () => {
     expect(mockDividir(100, 10)).resolves.toBe(10);
     expect(mockDividir).toHaveBeenCalledTimes(4);
     expect(mockDividir).toHaveBeenCalledWith(100, 10);
+  });
+
+  it('minus operation', () => {
+    const mockSubtrair = jest.spyOn(math, 'subtrair')
+    .mockResolvedValue(20);
+
+    expect(mockSubtrair).toHaveBeenCalledTimes(0);
+
+    expect(mockSubtrair()).resolves.toBe(20);
+    expect(mockSubtrair).toHaveBeenCalled();
+    expect(mockSubtrair).toHaveBeenCalledTimes(1);
+
+    mockSubtrair.mockRestore();
+    expect(math.subtrair(100, 400)).toBe(-300);
   });
 });
 
