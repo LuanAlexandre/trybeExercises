@@ -23,5 +23,28 @@ describe('arithmetic operations', () => {
     expect(math.somar).toHaveBeenCalledWith(5, 5);
     expect(math.somar(5, 5)).toBe(10);
   });
+
+  it('division operation', () => {
+    const mockDividir = jest.spyOn(math, 'dividir')
+    .mockResolvedValue(15)
+    .mockResolvedValueOnce(2)
+    .mockResolvedValueOnce(5);
+
+    expect(mockDividir).toHaveBeenCalledTimes(0);
+
+    expect(mockDividir()).resolves.toBe(2);
+    expect(mockDividir).toHaveBeenCalled();
+    expect(mockDividir).toHaveBeenCalledTimes(1);
+
+    expect(mockDividir()).resolves.toBe(5);
+    expect(mockDividir).toHaveBeenCalledTimes(2);
+
+    expect(mockDividir()).resolves.toBe(15);
+    expect(mockDividir).toHaveBeenCalledTimes(3);
+
+    expect(mockDividir(100, 10)).resolves.toBe(10);
+    expect(mockDividir).toHaveBeenCalledTimes(4);
+    expect(mockDividir).toHaveBeenCalledWith(100, 10);
+  });
 });
 
