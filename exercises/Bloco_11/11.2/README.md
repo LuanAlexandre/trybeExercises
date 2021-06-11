@@ -19,4 +19,4 @@ Você pode usar a imaginação para estilizar a sua aplicação. Entretanto, é 
 
 Segue uma sugestão de implementação da aplicação:
 
-![Gif exibindo uma sugestão de implementação da aplicação my-pokedex]("https://s3.us-east-2.amazonaws.com/assets.app.betrybe.com/front-end/react/components/my-pokedex-project-ea45ad91e83d132aa28598905106cbe2.gif")
+![](https://s3.us-east-2.amazonaws.com/assets.app.betrybe.com/front-end/react/components/my-pokedex-project-ea45ad91e83d132aa28598905106cbe2.gif)
