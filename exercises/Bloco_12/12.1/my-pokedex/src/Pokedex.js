@@ -15,10 +15,11 @@ class Pokedex extends React.Component {
       this.setState(() => ({
         currentPokemonIndex: 0,
       }));
+    } else {
+      this.setState((previousState) => ({
+        currentPokemonIndex: previousState.currentPokemonIndex + 1,
+      }));
     }
-    this.setState((previousState) => ({
-      currentPokemonIndex: previousState.currentPokemonIndex + 1,
-    }));
   }
 
   render() {
