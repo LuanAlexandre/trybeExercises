@@ -1,5 +1,5 @@
 import rootReducer from '../reducer/index';
 
-const store = createStore(rootReducer);
+const store = Redux.createStore(rootReducer);
 
 export default store;

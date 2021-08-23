@@ -1,7 +1,24 @@
-const rootReducer = (state, action) => {
+import { NEXT_COLOR, PREVIOUS_COLOR } from "../actions";
+
+const ESTADO_INICIAL = {
+  colors: ['white', 'black', 'red', 'green', 'blue', 'yellow'],
+  index: 0,
+};
+
+const rootReducer = (state = ESTADO_INICIAL, action) => {
   switch (action.type) {
-    default:
-      return state;
+  case NEXT_COLOR:
+    return ({
+      ...state,
+      index: action.index,
+    });
+  case PREVIOUS_COLOR:
+    return ({
+      ...state,
+      index: action.index,
+    });
+  default:
+    return state;
   }
 }
 
