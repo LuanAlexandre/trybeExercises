@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ## Exercícios do dia 16.1 - Introdução ao Redux
 
 ### Exercício 1
@@ -6,14 +5,6 @@
 Vamos construir um estado gerenciado pelo Redux e vamos realizar algumas modificações nele. O nosso objetivo será manipular a cor de um container através do Redux. O código inicial será disponibilizado a seguir:
 
 ```html
-=======
-## Exercícios de prática
-
-### Exercício 1
-Vamos construir um estado gerenciado pelo Redux e vamos realizar algumas modificações nele. O nosso objetivo será manipular a cor de um container através do Redux. O código inicial será disponibilizado a seguir:
-
-```js
->>>>>>> 5b3d993facc683a935bfaa3f76729e9d9436b448
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -177,19 +168,11 @@ window.onload = () => {
       };
 ```
 
-<<<<<<< HEAD
 5 - Adicione um `store.subscribe()` para atualizar as informações na página de acordo com o que temos armazenado na `store` . Quando a página carregar o nome renderizado deve ser alterado após alguns segundos.
 
 ### Bônus 1
 
 Você irá fazer 13 exercícios propostos pelo site `freecodecamp` , com objetivo de consolidar seus conhecimentos acerca dos conceitos presentes no **Redux**.
-=======
-5. Adicione um `store.subscribe()` para atualizar as informações na página de acordo com o que temos armazenado na `store` . Quando a página carregar o nome renderizado deve ser alterado após alguns segundos.
-
-### Bônus 1
-
-Você irá fazer 13 exercícios propostos pelo site `freecodecamp` , com objetivo de consolidar seus conhecimentos acerca dos conceitos presentes no _**Redux**_ .
->>>>>>> 5b3d993facc683a935bfaa3f76729e9d9436b448
 
 1 - [Definindo um action creator](https://www.freecodecamp.org/learn/front-end-libraries/redux/define-an-action-creator)
 
@@ -209,11 +192,7 @@ Você irá fazer 13 exercícios propostos pelo site `freecodecamp` , com objetiv
 
 9 - [Criando um contador com Redux](https://www.freecodecamp.org/learn/front-end-libraries/redux/write-a-counter-with-redux)
 
-<<<<<<< HEAD
 10 - [Por que nunca modificar um state ?](https://www.freecodecamp.org/learn/front-end-libraries/redux/never-mutate-state)
-=======
-10 - [Por que nunca modificar um state?](https://www.freecodecamp.org/learn/front-end-libraries/redux/never-mutate-state)
->>>>>>> 5b3d993facc683a935bfaa3f76729e9d9436b448
 
 11 - [Utilizando o spread operator como ferramenta para manter a imutabilidade do state](https://www.freecodecamp.org/learn/front-end-libraries/redux/use-the-spread-operator-on-arrays)
 
@@ -229,12 +208,6 @@ Agora você irá incrementar o código que foi feito durante a aula ao vivo.
 
  - Faça um campo que recebe um valor e esse será o valor aplicado ao botão decremento.
 
-<<<<<<< HEAD
- - Armazene um outro valor no state , chamado clickCount . Este campo vai contar o número de vezes que qualquer botão na tela foi clicado.
-
- - Armazene um array no state que guarda o valor individual que foi adicionado a cada click em qualquer um dos três botões.
-=======
  - Armazene um outro valor no `state` , chamado `clickCount` . Este campo vai contar o número de vezes que qualquer botão na tela foi clicado.
 
  - Armazene um `array` no `state` que guarda o valor individual que foi adicionado a cada click em qualquer um dos três botões.
->>>>>>> 5b3d993facc683a935bfaa3f76729e9d9436b448
