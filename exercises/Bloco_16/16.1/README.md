@@ -81,11 +81,7 @@ As cores criadas randomicamente devem ser armazenadas no array. Dessa forma, com
 
 Vamos combinar dois reducers existentes e retornar algumas informações para a nossa aplicação.
 
-<<<<<<< HEAD
 ```html
-=======
-```js
->>>>>>> 5b3d993facc683a935bfaa3f76729e9d9436b448
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -142,7 +138,6 @@ Vamos combinar dois reducers existentes e retornar algumas informações para a 
 </html>
 ```
 
-<<<<<<< HEAD
 1 - Combine os reducers existentes com a função `combineReducers` e salve-o em uma constante.
 
 2 - Crie uma store com a combinação dos reducers.
@@ -150,15 +145,6 @@ Vamos combinar dois reducers existentes e retornar algumas informações para a 
 3 - Crie `actions` que alterem o nome e o sobrenome dos estados iniciais, e adapte seu respectivo reducer.
 
 4 - Crie `dispatchs` para alterar os nomes após alguns segundos depois que a página carregar. Segue uma dica de como resolver este exercício:
-=======
-1. Combine os reducers existentes com a função `combineReducers` e salve-o em uma constante.
-
-2. Crie uma store com a combinação dos reducers.
-
-3. Crie `actions` que alterem o nome e o sobrenome dos estados iniciais, e adapte seu respectivo reducer.
-
-4. Crie `dispatchs` para alterar os nomes após alguns segundos depois que a página carregar. Segue uma dica de como resolver este exercício:
->>>>>>> 5b3d993facc683a935bfaa3f76729e9d9436b448
 
 ```js
 window.onload = () => {
