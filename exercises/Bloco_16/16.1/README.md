@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Exercícios do dia 16.1 - Introdução ao Redux
 
 ### Exercício 1
@@ -5,6 +6,14 @@
 Vamos construir um estado gerenciado pelo Redux e vamos realizar algumas modificações nele. O nosso objetivo será manipular a cor de um container através do Redux. O código inicial será disponibilizado a seguir:
 
 ```html
+=======
+## Exercícios de prática
+
+### Exercício 1
+Vamos construir um estado gerenciado pelo Redux e vamos realizar algumas modificações nele. O nosso objetivo será manipular a cor de um container através do Redux. O código inicial será disponibilizado a seguir:
+
+```js
+>>>>>>> 5b3d993facc683a935bfaa3f76729e9d9436b448
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -49,17 +58,19 @@ Vamos construir um estado gerenciado pelo Redux e vamos realizar algumas modific
 </html>
 ```
 
-1 - Crie uma store para a nossa aplicação.
+1. Crie uma store para a nossa aplicação.
 
-2 - Crie um reducer, implementando um `switch` retornando apenas o estado inicial como `default` . Não se esqueça de colocar o reducer como parâmetro para o `createStore` , feito na etapa anterior.
+2. Crie um reducer, implementando um `switch` retornando apenas o estado inicial como `default` . Não se esqueça de colocar o reducer como parâmetro para o `createStore` , feito na etapa anterior.
 
-3 - Incremente o `switch` criado no exercício anterior com as actions `NEXT_COLOR` e `PREVIOUS_COLOR` . Essas actions devem alterar o valor `index` guardado no `ESTADO_INICIAL` . Atente-se aos limites de tamanho do array, as posições devem iniciar em 0 e não podem exceder a numeração do último item do array.
+3. Incremente o `switch` criado no exercício anterior com as `actions NEXT_COLOR` e `PREVIOUS_COLOR` . Essas actions devem alterar o valor `index` guardado no `ESTADO_INICIAL` . Atente-se aos limites de tamanho do array, as posições devem iniciar em 0 e não podem exceder a numeração do último item do array.
 
-4 - Crie `eventListeners` que escutam os cliques de cada botão, o Previous color e o Next color , e realizam um `dispatch` com o respectivo `action.type` de cada.
+4. Crie `eventListeners` que escutam os cliques de cada botão, o **Previous color** e o **Next color** , e realizam um `dispatch` com o respectivo `action.type` de cada.
 
-5 - Faça o `subscribe` da store, alterando o `innerHTML` da tag com id `value` para a cor atual e o style do elemento com id `container` . Você deverá ser capaz de ver as cores mudando ao fundo, e o nome da cor exibida.
+5. Faça o `subscribe` da store, alterando o `innerHTML` da tag com id `value` para a cor atual e o style do elemento com id `container` . Você deverá ser capaz de ver as cores mudando ao fundo, e o nome da cor exibida.
 
-6 - Crie um botão com o texto **Random color** , um `eventListener` e uma `action` no `reducer` adicionando uma cor aleatória ao array `colors` guardado em nosso estado inicial. Faça também com que essa cor seja mostrada ao ser criada, alterando o estado `index` para a posição dela. Para facilitar, segue uma função que gera cores aleatórias:
+6. Crie um botão com o texto **Random color** , um `eventListener` e uma `action` no `reducer` adicionando uma cor aleatória ao array `colors` guardado em nosso estado inicial. Faça também com que essa cor seja mostrada ao ser criada, alterando o estado `index` para a posição dela.
+
+Para facilitar, segue uma função que gera cores aleatórias:
 
 ```js
 function criarCor() {
@@ -79,7 +90,11 @@ As cores criadas randomicamente devem ser armazenadas no array. Dessa forma, com
 
 Vamos combinar dois reducers existentes e retornar algumas informações para a nossa aplicação.
 
+<<<<<<< HEAD
 ```html
+=======
+```js
+>>>>>>> 5b3d993facc683a935bfaa3f76729e9d9436b448
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -136,6 +151,7 @@ Vamos combinar dois reducers existentes e retornar algumas informações para a 
 </html>
 ```
 
+<<<<<<< HEAD
 1 - Combine os reducers existentes com a função `combineReducers` e salve-o em uma constante.
 
 2 - Crie uma store com a combinação dos reducers.
@@ -143,6 +159,15 @@ Vamos combinar dois reducers existentes e retornar algumas informações para a 
 3 - Crie `actions` que alterem o nome e o sobrenome dos estados iniciais, e adapte seu respectivo reducer.
 
 4 - Crie `dispatchs` para alterar os nomes após alguns segundos depois que a página carregar. Segue uma dica de como resolver este exercício:
+=======
+1. Combine os reducers existentes com a função `combineReducers` e salve-o em uma constante.
+
+2. Crie uma store com a combinação dos reducers.
+
+3. Crie `actions` que alterem o nome e o sobrenome dos estados iniciais, e adapte seu respectivo reducer.
+
+4. Crie `dispatchs` para alterar os nomes após alguns segundos depois que a página carregar. Segue uma dica de como resolver este exercício:
+>>>>>>> 5b3d993facc683a935bfaa3f76729e9d9436b448
 
 ```js
 window.onload = () => {
@@ -152,11 +177,19 @@ window.onload = () => {
       };
 ```
 
+<<<<<<< HEAD
 5 - Adicione um `store.subscribe()` para atualizar as informações na página de acordo com o que temos armazenado na `store` . Quando a página carregar o nome renderizado deve ser alterado após alguns segundos.
 
 ### Bônus 1
 
 Você irá fazer 13 exercícios propostos pelo site `freecodecamp` , com objetivo de consolidar seus conhecimentos acerca dos conceitos presentes no **Redux**.
+=======
+5. Adicione um `store.subscribe()` para atualizar as informações na página de acordo com o que temos armazenado na `store` . Quando a página carregar o nome renderizado deve ser alterado após alguns segundos.
+
+### Bônus 1
+
+Você irá fazer 13 exercícios propostos pelo site `freecodecamp` , com objetivo de consolidar seus conhecimentos acerca dos conceitos presentes no _**Redux**_ .
+>>>>>>> 5b3d993facc683a935bfaa3f76729e9d9436b448
 
 1 - [Definindo um action creator](https://www.freecodecamp.org/learn/front-end-libraries/redux/define-an-action-creator)
 
@@ -176,7 +209,11 @@ Você irá fazer 13 exercícios propostos pelo site `freecodecamp` , com objetiv
 
 9 - [Criando um contador com Redux](https://www.freecodecamp.org/learn/front-end-libraries/redux/write-a-counter-with-redux)
 
+<<<<<<< HEAD
 10 - [Por que nunca modificar um state ?](https://www.freecodecamp.org/learn/front-end-libraries/redux/never-mutate-state)
+=======
+10 - [Por que nunca modificar um state?](https://www.freecodecamp.org/learn/front-end-libraries/redux/never-mutate-state)
+>>>>>>> 5b3d993facc683a935bfaa3f76729e9d9436b448
 
 11 - [Utilizando o spread operator como ferramenta para manter a imutabilidade do state](https://www.freecodecamp.org/learn/front-end-libraries/redux/use-the-spread-operator-on-arrays)
 
@@ -192,6 +229,12 @@ Agora você irá incrementar o código que foi feito durante a aula ao vivo.
 
  - Faça um campo que recebe um valor e esse será o valor aplicado ao botão decremento.
 
+<<<<<<< HEAD
  - Armazene um outro valor no state , chamado clickCount . Este campo vai contar o número de vezes que qualquer botão na tela foi clicado.
 
  - Armazene um array no state que guarda o valor individual que foi adicionado a cada click em qualquer um dos três botões.
+=======
+ - Armazene um outro valor no `state` , chamado `clickCount` . Este campo vai contar o número de vezes que qualquer botão na tela foi clicado.
+
+ - Armazene um `array` no `state` que guarda o valor individual que foi adicionado a cada click em qualquer um dos três botões.
+>>>>>>> 5b3d993facc683a935bfaa3f76729e9d9436b448

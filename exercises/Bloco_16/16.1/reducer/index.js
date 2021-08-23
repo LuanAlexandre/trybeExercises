@@ -1,4 +1,4 @@
-import { NEXT_COLOR, PREVIOUS_COLOR } from "../actions";
+import { NEXT_COLOR, PREVIOUS_COLOR } from "../actions/index";
 
 const ESTADO_INICIAL = {
   colors: ['white', 'black', 'red', 'green', 'blue', 'yellow'],
