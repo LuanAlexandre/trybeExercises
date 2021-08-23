@@ -25,3 +25,5 @@ const meuSegundoReducer = (state = ESTADO_INICIAL_2, action) => {
       return state;
   }
 };
+
+const rootReducer = Redux.combineReducers({ meuPrimeiroReducer, meuSegundoReducer});
