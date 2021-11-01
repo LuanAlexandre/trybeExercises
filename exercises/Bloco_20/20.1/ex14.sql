@@ -1,5 +1,5 @@
 SELECT
   employee_id,
   first_name,
-  MONTH(hire_date)
+  DAY(hire_date)
 FROM hr.employees;
