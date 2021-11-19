@@ -1,0 +1,13 @@
+Exercício 1: Clique com o  botão direito do mouse sobre o banco desejado e clique com o esquerdo em "search table data.."
+
+Exercício 2: Clique com o botão direito em "tables" dentro do banco desejado e clique com o esquerdo em "create table.." ou "create table like.."
+
+Exercício 3: Basta clicar e selecionar as constraints definidas
+
+Exercício 4: Tabela `Country`
+
+Exercício 5: Relacionamento N:1
+
+Exercício 6: Relacionamento 1:N
+
+Exercício 7: Country e City, Film e Category, Adress e Country
