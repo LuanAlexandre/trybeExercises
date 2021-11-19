@@ -16,7 +16,7 @@ _**Utilize o banco de dados sakila**_
     - **AnoLancamento:** não permite nulos, tipo int;
     - **Nota:** permite nulos, tipo int;
 
-**Exercício 4:** Analise a tabela `city` e encontere a tabela à qual a coluna `country_id` faz referência.
+**Exercício 4:** Analise a tabela `city` e encontre a tabela à qual a coluna `country_id` faz referência.
 
 **Exercício 5:** Após resolver o exercício anterior, responda: qual tipo de relacionamento a tabela `city` faz com a tabela `country` ?
 
