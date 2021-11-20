@@ -1,9 +1,10 @@
-## Bloco 21 - Normalização e Modelagem de Banco de Dados
+# Bloco 21 - Normalização e Modelagem de Banco de Dados
+
 ## Dia 2 - Normalização, Formas Normais e Dumps
 
 Não é necessário montar queries para resolver os exercícios. Crie novas planilhas com suas respostas.
 
-### Exercício 1: Converta a tabela desnormalizada abaixo para a 1ª Forma Normal.
+### Exercício 1: Converta a tabela desnormalizada abaixo para a 1ª Forma Normal
 
 Tabela desnormalizada:
 
@@ -14,7 +15,7 @@ Tabela desnormalizada:
 |       3       |   Vanderson Judis  | apartamento | Rua Brusque, 352, Ipatinga, MG        | Marta, Marizete            |
 |       4       |   Carolina Rude    | casa        | Av Atlantica, 254, Camboriú, SC       | Letícia, Laísa, Bartomoleu |
 
-### Exercício 2: Converta a tabela desnormalizada abaixo (que já está nos padrões da 1ª Forma Normal) para a 2ª Forma Normal.
+### Exercício 2: Converta a tabela desnormalizada abaixo (que já está nos padrões da 1ª Forma Normal) para a 2ª Forma Normal
 
 Tabela desnormalizada:
 
@@ -25,7 +26,7 @@ Tabela desnormalizada:
 | 3        | Flash         | Justice League | DC       | Bill Finger | 60            |
 | 4        | Batman        | Justice League | DC       | Lwn Wein    | 69            |
 
-### Exercício 3: Agora, converta essa outra tabela (que já está nos moldes das duas primeiras formas) para a 3ª Forma Normal.
+### Exercício 3: Agora, converta essa outra tabela (que já está nos moldes das duas primeiras formas) para a 3ª Forma Normal
 
 Tabela desnormalizada
 
