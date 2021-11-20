@@ -1,7 +1,8 @@
-## Bloco 21 - Normalização e Modelagem de Banco de Dados
+# Bloco 21 - Normalização e Modelagem de Banco de Dados
+
 ## Dia 1 - Tranformando Ideias Em Um Modelo de Banco de Dados
 
-### Exercícios:
+### Exercícios
 
 Um zoológico precisa de um banco de dados para armazenar informações sobre os seus animais. As informações a serem armazenadas sobre cada animal são:
 
