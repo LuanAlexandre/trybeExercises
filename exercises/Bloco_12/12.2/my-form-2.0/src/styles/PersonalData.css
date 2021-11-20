@@ -1,0 +1,5 @@
+.personal-data-form {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: space-around;
+}
