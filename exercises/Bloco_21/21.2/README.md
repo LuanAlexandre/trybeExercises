@@ -24,7 +24,7 @@ Tabela desnormalizada:
 | 1        | Homem Aranha  | Avengers       | Marvel   | Stan Lee    | 95            |
 | 2        | Jean Grey     | X-Men          | Marvel   | Gardner Fox | 75            |
 | 3        | Flash         | Justice League | DC       | Bill Finger | 60            |
-| 4        | Batman        | Justice League | DC       | Lwn Wein    | 69            |
+| 4        | Batman        | Justice League | DC       | Len Wein    | 69            |
 
 ### Exercício 3: Agora, converta essa outra tabela (que já está nos moldes das duas primeiras formas) para a 3ª Forma Normal
 
@@ -39,3 +39,7 @@ Tabela desnormalizada
 | 5        | 4                 | Drama             | 21.50         |
 | 6        | 4                 | Drama             | 18.00         |
 | 7        | 5                 | Comédia Romântica | 15.75         |
+
+## Bônus
+
+### Exercício 4: Faça os exercícios sobre normalização (em inglês) [deste link](https://www.javaguicodexample.com/normalizationnotes.pdf)
