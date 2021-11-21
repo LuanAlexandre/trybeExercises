@@ -4,7 +4,7 @@
 
 Vamos usar uma imagem disponível no DockerHub conhecida como "cowsay" _(Uma vaca falante no terminal)_ !
 
-A ideia pe deixarmos a mensagem para o cowsay parametrizável, dessa forma, conseguiremos executar o comando
+A ideia é deixarmos a mensagem para o cowsay parametrizável, dessa forma, conseguiremos executar o comando
 
 ```js
 docker container run cowsay Muuuuuuhhh
