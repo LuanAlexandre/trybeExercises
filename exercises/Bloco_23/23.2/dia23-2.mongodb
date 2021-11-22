@@ -8,3 +8,6 @@ db.superheroes.find({ "aspects.height": { $lt: 180 }});
 
 //Exercício 3
 db.superheroes.find({ "aspects.height": { $lt: 180 } }).count();
+
+//Exercício 4
+db.superheroes.find({ "aspects.height": { $lte: 180 } }).count();
