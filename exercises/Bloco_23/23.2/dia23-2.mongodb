@@ -2,3 +2,6 @@ use ('class');
 
 //Exercício 1
 db.superheroes.find();
+
+//Exercício 2
+db.superheroes.find({ "aspects.height": { $lt: 180 }});
