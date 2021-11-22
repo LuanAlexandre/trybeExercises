@@ -1,0 +1,5 @@
+version: '3'
+services:
+  build: ~/Documents/Trybe/trybeExercises/exercises/Bloco_22/22.3/dia22-3-05/
+  ports:
+    - 8080:80
