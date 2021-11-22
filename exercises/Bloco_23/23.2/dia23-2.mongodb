@@ -5,3 +5,6 @@ db.superheroes.find();
 
 //Exercício 2
 db.superheroes.find({ "aspects.height": { $lt: 180 }});
+
+//Exercício 3
+db.superheroes.find({ "aspects.height": { $lt: 180 } }).count();
