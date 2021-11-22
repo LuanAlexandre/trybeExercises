@@ -1,0 +1,4 @@
+use ('class');
+
+//Exercício 1
+db.superheroes.find();
