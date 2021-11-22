@@ -38,3 +38,11 @@ db.superheroes.find({ "aspects.height": { $not: { $gt: 180 } } }).count();
 
 //Exercício 13
 db.superheroes.find({ $nor: [{ "aspects.race": "Human" }, { "aspects.height": { $gt: 180 } }] });
+
+//Exercício 14
+db.superheroes.find({
+  $and: [
+    { $or: [{ "aspects.height": 180 }, { "aspects.height": 200 }] },
+    { publisher: "Marvel Comics" }
+  ]
+});
