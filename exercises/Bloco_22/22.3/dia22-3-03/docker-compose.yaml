@@ -6,12 +6,13 @@ services:
       - 2368:2368
     depends_on:
       - "database"
+    environment:
+      - database__client=mysql
+      - database__connection__database=ghost
+      - database__connection__host=database
+      - database__connection__user=root
+      - database__connection__password=root
   database:
     image: mysql:5.7
     environment:
-      - MYSQL_ROOT_PASSWORD=root
-      - database__client=mysql
-      - database__connection__database=ghost
-      - database__connection__host=3000
-      - database__connection__user=alexandre
-      - database__connection__password=24L11a*19R97b
+      - MYSQL_ROOT_PASSWORD="${MYSQL_ROOT_PASSWORD}"
