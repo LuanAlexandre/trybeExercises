@@ -121,6 +121,6 @@ Crie um arquivo Compose para subir o Wordpress com _MySQL_:
 
 6. Utilize o parâmetro `depends_on` para criar dependência entre os serviços;
 
-7. Adicione a política de `restart` com o valor `always` aos serviçoes;
+7. Adicione a política de `restart` com o valor `always` aos serviços;
 
 8. Suba os serviços utilizando `docker-compose` e abra o terminal para validar o funcionamento.
