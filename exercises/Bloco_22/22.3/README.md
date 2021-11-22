@@ -92,3 +92,35 @@ Agora vamos criar um novo arquivo Compose, para rodarmos uma aplicação `React`
 **Exercício 6:**
 
 Para simularmos o processo de desenvolvimento, faça alteração em alguma parte do código _app react_, e então execute o comando para subir o serviço novamente "rebuildando" a imagem para aplicar as alterações.
+
+## Bônus
+
+**Exercício 7:**
+
+Crie um arquivo Compose para subir o Wordpress com _MySQL_:
+
+1. Utilize a imagem `wordpress:latest` e `mysql:5.7`;
+
+2. Faça bind da porta `80` do container do _wordpress_ para `8080` do host;
+
+3. Defina as seguintes variáveis para o _wordpress_:
+
+   - WORDPRESS_DB_HOST: db:3306
+   - WORDPRESS_DB_USER: wordpress
+   - WORDPRESS_DB_PASSWORD: wordpress
+   - WORDPRESS_DB_NAME: wordpress
+
+4. Defina as seguintes variáveis para o _mysql_:
+
+   - MYSQL_ROOT_PASSWORD: somewordpress
+   - MYSQL_DATABASE: wordpress
+   - MYSQL_USER: wordpress
+   - MYSQL_PASSWORD: wordpress
+
+5. Defina o volume `db_data` para o mysql;
+
+6. Utilize o parâmetro `depends_on` para criar dependência entre os serviços;
+
+7. Adicione a política de `restart` com o valor `always` aos serviçoes;
+
+8. Suba os serviços utilizando `docker-compose` e abra o terminal para validar o funcionamento.
