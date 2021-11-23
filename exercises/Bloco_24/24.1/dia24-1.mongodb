@@ -80,3 +80,9 @@ db.movies.updateMany(
   {},
   { $set: { sequels: 0 } },
 );
+
+//Exercício 12
+db.movies.updateMany(
+  {},
+  { $unset: { budget: "", estimateBudget: "" } },
+);
