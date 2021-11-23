@@ -20,11 +20,21 @@ db.movies.insertMany([
 ]);
 
 //Exercício 1
-db.movies.update(
+db.movies.updateOne(
   {
     title: "Batman",
   },
   {
     $set: { imdbRating: 7.7 },
+  },
+);
+
+//Exercício 2
+db.movies.updateOne(
+  {
+    title: "Godzilla",
+  },
+  {
+    $set: { budget: 1 },
   },
 );
