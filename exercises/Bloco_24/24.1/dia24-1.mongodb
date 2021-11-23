@@ -86,3 +86,9 @@ db.movies.updateMany(
   {},
   { $unset: { budget: "", estimateBudget: "" } },
 );
+
+//Exercício 13
+db.movies.updateMany(
+  { $or: [{ title: "Batman"}, { title: "Home Alone" }] },
+  { $max: { imdbRating: 17 } },
+);
