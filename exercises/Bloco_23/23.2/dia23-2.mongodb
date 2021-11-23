@@ -55,3 +55,8 @@ db.superheroes.find({
     { publisher: { $ne: "DC Comics" } }
   ]
 });
+
+//Exercício 16
+db.superheroes.find({
+  race: { $exists: false }
+}).count();
