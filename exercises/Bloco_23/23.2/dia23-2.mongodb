@@ -46,3 +46,12 @@ db.superheroes.find({
     { publisher: "Marvel Comics" }
   ]
 });
+
+//Exercício 15
+db.superheroes.find({
+  $and: [
+    { "aspects.weight": { $gt: 80, $lt: 100 } },
+    { $or: [{ race: "Human" }, { race: "Mutant" }] },
+    { publisher: { $ne: "DC Comics" } }
+  ]
+});
