@@ -147,3 +147,12 @@ db.xmen.updateMany(
   ]},
   { $set: { areas: ["Students Room"] } },
 );
+
+//Exercício 20
+db.xmen.updateMany(
+  { 
+    occupation: "Junior Staff",
+    areas: { $exists: false },
+  },
+  { $set: { areas: ["Outside"] } },
+);
