@@ -29,3 +29,9 @@ db.movies.updateOne(
     },
   },
 );
+
+//Exercício 4
+db.movies.updateOne(
+  { title: "Batman" },
+  { $inc: { imdbRating: 2 } },
+);
