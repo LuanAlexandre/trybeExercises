@@ -47,3 +47,9 @@ db.movies.updateOne(
   { title: "Batman" },
   { $mul: { imdbRating: 4 } },
 );
+
+//Exercício 7
+db.movies.updateOne(
+  { title: "Batman" },
+  { $rename: { budget: "estimateBudget" } },
+);
