@@ -122,3 +122,9 @@ db.xmen.updateMany(
   { class: "gama" },
   { $min: { power: 300 } },
 );
+
+//Exercício 18
+db.xmen.updateMany(
+  { class: { $exists: false } },
+  { $inc: { power: -100 } },
+);
