@@ -92,3 +92,9 @@ db.movies.updateMany(
   { $or: [{ title: "Batman"}, { title: "Home Alone" }] },
   { $max: { imdbRating: 17 } },
 );
+
+//Exercício 14
+db.xmen.updateMany(
+  { class: "unknown" },
+  { $unset: { class: "" } },
+);
