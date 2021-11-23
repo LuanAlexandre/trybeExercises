@@ -110,3 +110,9 @@ db.xmen.updateMany(
     $set: { power: 100 },
   },
 );
+
+//Exercício 16
+db.xmen.updateMany(
+  { $or: [{ class: "omega" }, { class: "gama" }] },
+  { $max: { power: 500 } },
+);
