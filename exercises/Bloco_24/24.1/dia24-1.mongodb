@@ -35,3 +35,9 @@ db.movies.updateOne(
   { title: "Batman" },
   { $inc: { imdbRating: 2 } },
 );
+
+//Exercício 5
+db.movies.updateOne(
+  { title: "Home Alone" },
+  { $inc: { budget: 5 } },
+);
