@@ -60,3 +60,8 @@ db.superheroes.find({
 db.superheroes.find({
   race: { $exists: false }
 }).count();
+
+//Exercício 17
+db.superheroes.find({
+  "aspects.hairColor": { $exists: true }
+}).count();
