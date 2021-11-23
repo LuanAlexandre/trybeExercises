@@ -74,3 +74,9 @@ db.movies.updateOne(
   { title: "Home Alone" },
   { $currentDate: { lastUpdated: { $type: "timestamp" } } },
 );
+
+//Exercício 11
+db.movies.updateMany(
+  {},
+  { $set: { sequels: 0 } },
+);
