@@ -116,3 +116,40 @@ db.movies.updateOne(
     },
   },
 );
+
+//Exercício 11
+db.movies.updateOne(
+  { title: "Batman" },
+  {
+    $set: {
+      "cast.$[element].actor": ["Christian Bale"],
+    },
+  },
+  {
+    arrayFilters: [{ "element.character": "Batman" }],
+  },
+);
+
+db.movies.updateOne(
+  { title: "Batman" },
+  {
+    $set: {
+      "cast.$[element].actor": ["Michael Kaine"],
+    },
+  },
+  {
+    arrayFilters: [{ "element.character": "Alfred" }],
+  },
+);
+
+db.movies.updateOne(
+  { title: "Batman" },
+  {
+    $set: {
+      "cast.$[element].actor": ["Heath Ledger"],
+    },
+  },
+  {
+    arrayFilters: [{ "element.character": "Coringa" }],
+  },
+);
