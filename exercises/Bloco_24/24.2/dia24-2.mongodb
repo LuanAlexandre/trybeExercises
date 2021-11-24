@@ -20,3 +20,13 @@ db.movies.updateOne(
     },
   },
 );
+
+//Exercício 3
+db.movies.updateOne(
+  { title: "Batman" },
+  {
+    $pull: {
+      category: "action",
+    },
+  },
+);
