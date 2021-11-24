@@ -1,0 +1,285 @@
+use ("class");
+
+//Exercício 1
+db.movies.find(
+  {
+    category: {
+      $all: ["action", "adventure"],
+    },
+  }
+).pretty();
+
+//Exercício 2
+db.movies.find(
+  {
+    category: {
+      $all: ["action"],
+    },
+    imdbRating: { $gt: 7 },
+  },
+).pretty();
+
+//Exercício 3
+db.movies.updateOne(
+  { title: "Batman"},
+  {
+    $set: {
+      ratings: [85, 100, 102, 105],
+    },
+  },
+);
+
+//Exercício 4
+db.movies.updateOne(
+  { title: "Godzilla"},
+  {
+    $set: {
+      ratings: [78, 52, 95, 102],
+    },
+  },
+);
+
+//Exercício 5
+db.movies.updateOne(
+  { title: "Home Alone"},
+  {
+    $set: {
+      ratings: [200, 99, 65],
+    },
+  },
+);
+
+//Exercício 6
+db.movies.find(
+  {
+    ratings: {
+      $elemMatch: { $gt: 103 },
+    },
+  },
+  {
+    _id: false,
+    title: true,
+    ratings: true,
+  },
+).pretty();
+
+//Exercício 7
+db.movies.find(
+  {
+    ratings: {
+      $elemMatch: {
+        $gt: 100,
+        $lt: 105,
+      },
+    },
+  },
+  {
+    _id: false,
+    title: true,
+    ratings: true,
+  },
+).pretty();
+
+//Exercício 8
+use ("class");
+db.movies.find(
+  {
+    ratings: {
+      $elemMatch: {
+        $gt: 64,
+        $lt: 105,
+        $mod: [9, 0],
+      },
+    },
+  },
+  {
+    _id: false,
+    title: true,
+    ratings: true,
+  },
+).pretty();
+
+//Exercício 9
+db.movies.find(
+  {
+    $and: [
+      { category: { $elemMatch: { $eq: "adventure"} } },
+      { ratings: { $elemMatch: { $gt: 103 } } },
+    ],
+  },
+  {
+    _id: false,
+    title: true,
+    ratings: true,
+    category: true,
+  },
+)
+.pretty();
+
+//Exercício 10
+db.movies.find(
+  {
+    category: { $size: 2 },
+  },
+  {
+    _id: false,
+    title: true,
+  },
+)
+.pretty();
+
+//Exercício 11
+db.movies.find(
+  {
+    ratings: { $size: 4 },
+  },
+  {
+    _id: false,
+    title: true,
+  },
+)
+.pretty();
+
+//Exercício 12
+db.movies.find(
+  {
+    $and: [
+      { budget: { $mod: [5, 0] } },
+      { category: { $size: 2 } },
+    ],
+  },
+)
+.pretty();
+
+//Exercício 13
+db.movies.find(
+  {
+    $or: [
+      {
+        category: {
+          $elemMatch: { $eq: "sci-fi" },
+        }
+      },
+      {
+        ratings: {
+          $elemMatch: { $gt: 199 },
+        },
+      },
+    ],
+  },
+  {
+    _id: false,
+    title: true,
+    ratings: true,
+    category: true,
+  },
+)
+.pretty();
+
+//Exercício 14
+db.movies.find(
+  {
+    $and: [
+      { ratings: { $size: 4 } },
+      { $or:
+        [
+          {
+            category: {
+              $elemMatch: { $eq: "adventure" },
+            },
+          },
+          {
+            category: {
+              $elemMatch: { $eq: "family" },
+            },
+          },
+        ]
+      },
+      { imdbRating: { $not: { $lt: 7 } } },
+    ],
+  },
+)
+.pretty();
+
+//Exercício 15
+db.movies.updateOne(
+  { title: "Batman" },
+  {
+    $set: {
+      description: "The Dark Knight of Gotham City begins his war on crime with his first major enemy being Jack Napier, a criminal who becomes the clownishly homicidal Joker.",
+    },
+  },
+);
+
+//Exercício 16
+db.movies.updateOne(
+  { title: "Godzilla" },
+  {
+    $set: {
+      description: "The world is beset by the appearance of monstrous creatures, but one of them may be the only who can save humanity.",
+    },
+  },
+);
+
+//Exercício 17
+db.movies.updateOne(
+  { title: "Home Alone" },
+  {
+    $set: {
+      description: "An eight-year-old troublemaker must protect his house from a pair of burglars when he is accidentally left home alone by his family during Christmas vacation",
+    },
+  },
+);
+
+//Exercício 18
+db.movies.find(
+  {
+    description: {
+      $regex: /^The/,
+    },
+  },
+)
+.pretty();
+
+//Exercício 19
+db.movies.find(
+  {
+    description: {
+      $regex: /humanity.$/,
+    },
+  },
+)
+.pretty();
+
+//Exercício 20
+db.movies.createIndex({ description: "text" });
+
+//Exercício 21
+db.movies.find(
+  {
+    $text: {
+      $search: "vacation",
+    },
+  },
+)
+.pretty();
+
+//Exercício 22
+db.movies.find(
+  {
+    $text: {
+      $search: "monstrous criminal",
+    },
+  },
+)
+.pretty();
+
+//Exercício 23
+db.movies.find(
+  {
+    $text: {
+      $search: "\"when he is accidentally\"",
+    },
+  },
+)
+.pretty();
