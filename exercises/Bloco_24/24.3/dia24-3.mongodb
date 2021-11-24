@@ -115,3 +115,15 @@ db.movies.find(
   },
 )
 .pretty();
+
+//Exercício 10
+db.movies.find(
+  {
+    category: { $size: 2 },
+  },
+  {
+    _id: false,
+    title: true,
+  },
+)
+.pretty();
