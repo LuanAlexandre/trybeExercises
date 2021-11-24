@@ -139,3 +139,14 @@ db.movies.find(
   },
 )
 .pretty();
+
+//Exercício 12
+db.movies.find(
+  {
+    $and: [
+      { budget: { $mod: [5, 0] } },
+      { category: { $size: 2 } },
+    ],
+  },
+)
+.pretty();
