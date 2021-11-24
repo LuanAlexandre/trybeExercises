@@ -263,3 +263,13 @@ db.movies.find(
   },
 )
 .pretty();
+
+//Exercício 22
+db.movies.find(
+  {
+    $text: {
+      $search: "monstrous criminal",
+    },
+  },
+)
+.pretty();
