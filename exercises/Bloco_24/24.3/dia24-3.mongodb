@@ -79,3 +79,22 @@ db.movies.find(
     ratings: true,
   },
 ).pretty();
+
+//Exercício 8
+use ("class");
+db.movies.find(
+  {
+    ratings: {
+      $elemMatch: {
+        $gt: 64,
+        $lt: 105,
+        $mod: [9, 0],
+      },
+    },
+  },
+  {
+    _id: false,
+    title: true,
+    ratings: true,
+  },
+).pretty();
