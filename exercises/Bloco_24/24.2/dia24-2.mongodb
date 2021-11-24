@@ -153,3 +153,27 @@ db.movies.updateOne(
     arrayFilters: [{ "element.character": "Coringa" }],
   },
 );
+
+//Exercício 12
+db.movies.updateOne(
+  { title: "Batman" },
+  {
+    $push: {
+      "cast.$[element].actor": {
+        $each: [
+          "Michael Keaton",
+          "Val Kilmer",
+          "George Clooney"
+        ],
+        $sort: 1,
+      },
+    },
+  },
+  {
+    arrayFilters: [
+      {
+        "element.character": "Batman",
+      },
+    ],
+  },
+);
