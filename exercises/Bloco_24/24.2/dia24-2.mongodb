@@ -50,3 +50,18 @@ db.movies.updateOne(
     $addToSet: { category: "action" },
   },
 );
+
+//Exercício 7
+db.movies.updateMany(
+  {
+    $or: [
+      { title: "Batman"},
+      { title: "Home Alone"},
+    ]
+  },
+  {
+    $push: {
+      category: "90's"
+    },
+  },
+);
