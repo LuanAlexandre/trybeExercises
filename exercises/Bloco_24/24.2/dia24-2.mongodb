@@ -65,3 +65,25 @@ db.movies.updateMany(
     },
   },
 );
+
+//Exercício 8
+db.movies.updateOne(
+  { title: "Home Alone" },
+  {
+    $set: {
+      cast: [
+        {
+          actor: "Macauly Culkin",
+          character: "Kevin",
+        },
+        {
+          actor: "Joe Pesci",
+          character: "Harry",
+        },
+        {
+          actor: "Daniel Stern",
+        },
+      ],
+    },
+  },
+);
