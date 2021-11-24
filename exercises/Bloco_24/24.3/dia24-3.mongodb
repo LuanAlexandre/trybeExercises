@@ -210,3 +210,13 @@ db.movies.updateOne(
     },
   },
 );
+
+//Exercício 16
+db.movies.updateOne(
+  { title: "Godzilla" },
+  {
+    $set: {
+      description: "The world is beset by the appearance of monstrous creatures, but one of them may be the only who can save humanity.",
+    },
+  },
+);
