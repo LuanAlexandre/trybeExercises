@@ -5,3 +5,18 @@ db.movies.updateOne(
   { title: "Batman" },
   { $push: { category: "superhero" } },
 );
+
+//Exercício 2
+db.movies.updateOne(
+  { title: "Batman" },
+  {
+    $push: {
+      category: {
+        $each: [
+          "villain",
+          "comic-based"
+        ],
+      },
+    },
+  },
+);
