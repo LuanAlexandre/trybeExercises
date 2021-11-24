@@ -250,3 +250,6 @@ db.movies.find(
   },
 )
 .pretty();
+
+//Exercício 20
+db.movies.createIndex({ description: "text" });
