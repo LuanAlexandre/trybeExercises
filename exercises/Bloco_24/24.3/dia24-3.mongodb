@@ -175,3 +175,28 @@ db.movies.find(
   },
 )
 .pretty();
+
+//Exercício 14
+db.movies.find(
+  {
+    $and: [
+      { ratings: { $size: 4 } },
+      { $or:
+        [
+          {
+            category: {
+              $elemMatch: { $eq: "adventure" },
+            },
+          },
+          {
+            category: {
+              $elemMatch: { $eq: "family" },
+            },
+          },
+        ]
+      },
+      { imdbRating: { $not: { $lt: 7 } } },
+    ],
+  },
+)
+.pretty();
