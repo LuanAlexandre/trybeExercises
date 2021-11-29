@@ -1,0 +1,316 @@
+use ("erp");
+
+//Exercício 1
+db.clientes.aggregate([
+  {
+    $match: {
+      sexo: "MASCULINO",
+    },
+  },
+])
+.pretty();
+
+//Exercício 2
+use ("erp");
+db.clientes.aggregate([
+  {
+    $match: {
+      $and: [
+        { sexo: "FEMININO" },
+        { dataNascimento: { $gt: new Date("1995"), $lt: new Date("2005") } },
+      ],
+    },
+  },
+])
+.pretty();
+
+//Exercício 3
+use ("erp");
+db.clientes.aggregate([
+  {
+    $match: {
+      $and: [
+        { sexo: "FEMININO" },
+        { dataNascimento: { $gt: new Date("1995"), $lt: new Date("2005") } },
+      ],
+    },
+  },
+  { $limit: 5 },
+])
+.pretty();
+
+//Exercício 4
+db.clientes.aggregate([
+  {
+    $group: {
+      _id: "$endereco.uf",
+      total: { $sum: 1 },
+    },
+  },
+])
+.pretty();
+
+//Exercício 5
+db.clientes.aggregate([
+  {
+    $group: {
+      _id: "$sexo",
+      total: { $sum: 1 },
+    },
+  },
+  {
+    $project: {
+      _id: false,
+      total: true,
+    },
+  },
+])
+.pretty();
+
+//Exercício 6
+db.clientes.aggregate([
+  {
+    $group: {
+      _id: { sexo: "$sexo", estado: "$endereco.uf" },
+      total: { $sum: 1 },
+    }
+  },
+])
+.pretty();
+
+//Exercício 7
+db.clientes.aggregate([
+  {
+    $group: {
+      _id: { sexo: "$sexo", estado: "$endereco.uf" },
+      total: { $sum: 1 },
+    }
+  },
+  {
+    $project: {
+      _id: false,
+      "sexo": "$_id.sexo",
+      "estado": "$_id.estado",
+      "total": true,
+    },
+  },
+])
+.pretty();
+
+//Exercício 8
+db.vendas.aggregate([
+  {
+    $project: {
+      _id: false,
+      clienteId: true,
+      total: {
+        $reduce: {
+          input: "$itens",
+          initialValue: 0,
+          in: {
+            $sum: {
+              $add: [
+                "$$value",
+                {
+                  $multiply: ["$$this.valorUnitario", "$$this.quantidade"],
+                },
+              ],
+            },
+          },
+        },
+      },
+    },
+  },
+  {
+    $sort: {
+      total: -1,
+    },
+  },
+  {
+    $limit: 5,
+  },
+])
+.pretty();
+
+//Exercício 9
+db.vendas.aggregate([
+  {
+    $match: {
+      dataVenda: {
+        $gt: new Date("2019-01-01"),
+        $lt: new Date("2020-01-01"),
+      },
+    },
+  },
+  {
+    $project: {
+      _id: false,
+      clienteId: true,
+      total: {
+        $reduce: {
+          input: "$itens",
+          initialValue: 0,
+          in: {
+            $sum: {
+              $add: [
+                "$$value",
+                {
+                  $multiply: ["$$this.valorUnitario", "$$this.quantidade"],
+                },
+              ],
+            },
+          },
+        },
+      },
+    },
+  },
+  {
+    $sort: {
+      total: -1,
+    },
+  },
+  {
+    $limit: 10,
+  },
+])
+.pretty();
+
+//Exercício 10
+db.vendas.aggregate([
+  {
+    $group: {
+      _id: "$clienteId",
+      compras: { $sum: 1 },
+    },
+  },
+  {
+    $match: {
+      compras: { $gt: 5 },
+    },
+  },
+  {
+    $count: "clientes",
+  },
+  {
+    $project: {
+      _id: false,
+      clientes: true,
+    },
+  },
+])
+.pretty();
+
+//Exercício 11
+db.vendas.aggregate([
+  {
+    $match: {
+      dataVenda: {
+        $gt: new Date("2020-01-01"),
+        $lt: new Date("2020-03-01"),
+      },
+    },
+  },
+  {
+    $group: {
+      _id: "$clienteId",
+      compras: { $sum: 1 },
+    },
+  },
+  {
+    $match: {
+      compras: { $lt: 3 },
+    },
+  },
+  {
+    $count: "clientes",
+  },
+])
+.pretty();
+
+//Exercício 12
+//Resposta tirada do gabarito
+db.vendas.aggregate([
+  {
+match: {
+      dataVenda: {
+gte: ISODate('2020-01-01')
+      }
+    }
+  },
+  {
+lookup: {
+      from: 'clientes',
+      localField: 'clienteId',
+      foreignField: 'clienteId',
+      as: 'dadosCliente'
+    }
+  },
+  {
+unwind: "$dadosCliente"
+  },
+  {
+group: {
+      _id: "$dadosCliente.endereco.uf",
+      totalVendas: {
+sum: 1
+      }
+    }
+  },
+  {
+sort: {
+      totalVendas: -1
+    }
+  },
+  { $limit: 3 },
+  {
+project: {
+      _id: 0,
+      uf: "$_id",
+      totalVendas: 1
+    }
+  }
+]);
+
+//Exercício 13
+//Resposta tirada do gabarito
+db.vendas.aggregate([
+  {
+match: {
+      dataVenda: {
+gte: ISODate('2019-01-01'),
+lte: ISODate('2019-12-31')
+      }
+    }
+  },
+  {
+lookup: {
+      from: 'clientes',
+      localField: 'clienteId',
+      foreignField: 'clienteId',
+      as: 'cliente'
+    }
+  },
+  {
+unwind: "$cliente"
+  },
+  {
+group: {
+      _id: "$cliente.endereco.uf",
+      mediaVendas: { $avg: "$valorTotal" },
+      totalVendas: { $sum: 1 }
+    }
+  },
+  {
+project: {
+      _id: 0,
+      uf: "$_id",
+      mediaVendas: 1,
+      totalVendas: 1
+    }
+  },
+  {
+sort: {
+      uf: 1
+    }
+  }
+]);
