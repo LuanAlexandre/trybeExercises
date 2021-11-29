@@ -9,3 +9,17 @@ db.clientes.aggregate([
   },
 ])
 .pretty();
+
+//Exercício 2
+use ("erp");
+db.clientes.aggregate([
+  {
+    $match: {
+      $and: [
+        { sexo: "FEMININO" },
+        { dataNascimento: { $gt: new Date("1995"), $lt: new Date("2005") } },
+      ],
+    },
+  },
+])
+.pretty();
