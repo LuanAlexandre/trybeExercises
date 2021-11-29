@@ -199,3 +199,30 @@ db.vendas.aggregate([
   },
 ])
 .pretty();
+
+//Exercício 11
+db.vendas.aggregate([
+  {
+    $match: {
+      dataVenda: {
+        $gt: new Date("2020-01-01"),
+        $lt: new Date("2020-03-01"),
+      },
+    },
+  },
+  {
+    $group: {
+      _id: "$clienteId",
+      compras: { $sum: 1 },
+    },
+  },
+  {
+    $match: {
+      compras: { $lt: 3 },
+    },
+  },
+  {
+    $count: "clientes",
+  },
+])
+.pretty();
