@@ -66,3 +66,14 @@ db.clientes.aggregate([
   },
 ])
 .pretty();
+
+//Exercício 6
+db.clientes.aggregate([
+  {
+    $group: {
+      _id: { sexo: "$sexo", estado: "$endereco.uf" },
+      total: { $sum: 1 },
+    }
+  },
+])
+.pretty();
