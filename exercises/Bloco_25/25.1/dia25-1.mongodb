@@ -174,3 +174,28 @@ db.vendas.aggregate([
   },
 ])
 .pretty();
+
+//Exercício 10
+db.vendas.aggregate([
+  {
+    $group: {
+      _id: "$clienteId",
+      compras: { $sum: 1 },
+    },
+  },
+  {
+    $match: {
+      compras: { $gt: 5 },
+    },
+  },
+  {
+    $count: "clientes",
+  },
+  {
+    $project: {
+      _id: false,
+      clientes: true,
+    },
+  },
+])
+.pretty();
