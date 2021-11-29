@@ -1,0 +1,11 @@
+use ("erp");
+
+//Exercício 1
+db.clientes.aggregate([
+  {
+    $match: {
+      sexo: "MASCULINO",
+    },
+  },
+])
+.pretty();
