@@ -38,3 +38,14 @@ db.clientes.aggregate([
   { $limit: 5 },
 ])
 .pretty();
+
+//Exercício 4
+db.clientes.aggregate([
+  {
+    $group: {
+      _id: "$endereco.uf",
+      total: { $sum: 1 },
+    },
+  },
+])
+.pretty();
