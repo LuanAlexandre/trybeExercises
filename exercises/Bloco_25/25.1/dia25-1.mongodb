@@ -96,3 +96,38 @@ db.clientes.aggregate([
   },
 ])
 .pretty();
+
+//Exercício 8
+db.vendas.aggregate([
+  {
+    $project: {
+      _id: false,
+      clienteId: true,
+      total: {
+        $reduce: {
+          input: "$itens",
+          initialValue: 0,
+          in: {
+            $sum: {
+              $add: [
+                "$$value",
+                {
+                  $multiply: ["$$this.valorUnitario", "$$this.quantidade"],
+                },
+              ],
+            },
+          },
+        },
+      },
+    },
+  },
+  {
+    $sort: {
+      total: -1,
+    },
+  },
+  {
+    $limit: 5,
+  },
+])
+.pretty();
