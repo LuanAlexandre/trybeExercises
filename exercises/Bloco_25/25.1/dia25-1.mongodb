@@ -49,3 +49,20 @@ db.clientes.aggregate([
   },
 ])
 .pretty();
+
+//Exercício 5
+db.clientes.aggregate([
+  {
+    $group: {
+      _id: "$sexo",
+      total: { $sum: 1 },
+    },
+  },
+  {
+    $project: {
+      _id: false,
+      total: true,
+    },
+  },
+])
+.pretty();
