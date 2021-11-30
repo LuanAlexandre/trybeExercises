@@ -257,3 +257,44 @@ db.clientes.aggregate([
   },
 ])
 .pretty();
+
+//Exercício 8
+db.vendas.aggregate([
+  {
+    $match: {
+      $and: [
+        { dataVenda: { $gte: ISODate("2020-03-01"), $lte: ISODate("2020-03-31") } },
+        { status: "EM SEPARACAO" },
+      ],
+    },
+  },
+  {
+    $addFields: {
+      dataEntregaPrevista: {
+        $add: ["$dataVenda", 3 * 24 * 3600 * 1000],
+      },
+    },
+  },
+  {
+    $lookup: {
+      from: "clientes",
+      localField: "clienteId",
+      foreignField: "clienteId",
+      as: "compradores",
+    },
+  },
+  {
+    $unwind: "$compradores",
+  },
+  {
+    $project: {
+      _id: false,
+      clienteId: true,
+      dataVenda: true,
+      dataEntregaPrevista: true,
+    },
+  },
+])
+.pretty();
+
+//No exercício 8 não precisa do lookup e do unwind
