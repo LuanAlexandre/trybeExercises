@@ -4,7 +4,8 @@
   "description": "## Dia 1 - Node.js - Introdução",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run imc": "node imc.js"
   },
   "keywords": [],
   "author": "",
