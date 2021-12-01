@@ -1,3 +1,10 @@
-const imc = 76 / (1.64 * 1.64);
+const readline = require('readline-sync');
+
+const weight = readline.questionInt("Qual seu peso? ");
+const height = readline.questionInt("Qual sua altura? ");
+
+const imc = weight / (height * height);
+
+console.log(imc);
 
 module.exports = imc;
