@@ -8,11 +8,10 @@ function game() {
   if(palpite === resposta) console.log("Parabéns, número correto!");
   else console.log(`Opa, não foi dessa vez. O número era ${resposta}`);
   
-  const jogarNovamente = readline.question("1 - Jogar de novo\n2 - Sair\n");
+  const jogarNovamente = readline.questionInt("1 - Jogar de novo\n2 - Sair\n");
 
   if(jogarNovamente === 1) game();
-  else console.log("Até mais! :)");
+  else return console.log("Até mais! :)");
 }
 
-game();
-
+module.exports = game;
