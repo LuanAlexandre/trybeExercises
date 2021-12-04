@@ -65,4 +65,19 @@ async function addPerson() {
   }
 }
 
-addPerson();
+//Requisito 6
+async function replacePerson() {
+  const maggie = 'Maggie Simpson';
+
+  try {
+    const resolve = await fs.readFile(simpsonFamily, 'utf-8');
+    const content = await JSON.parse(resolve);
+    content.forEach((element) => {
+      if(element.name === 'Nelson Muntz') element.name = maggie;
+    });
+    await fs.writeFile(simpsonFamily, JSON.stringify(content));
+    console.log('Substituição realizada com sucesso');
+  } catch(error) {
+    console.error(`${error}`);
+  }
+}
