@@ -11,4 +11,14 @@ async function readFileSimpsons(file) {
   };
 }
 
-readFileSimpsons(simpsons);
+//Requisito 2
+async function findPersonById(personId) {
+  try {
+    const resolve = await fs.readFile(simpsons, 'utf-8');
+    const content = await JSON.parse(resolve);
+    const subject = content.find(({ id }) => id === personId);
+    console.log(`${subject.id} - ${subject.name}`);
+  } catch(error) {
+    console.log(`id não encontrado`);
+  }
+}
