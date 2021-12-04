@@ -48,3 +48,21 @@ async function createNewSimpsonsFile() {
     console.error(`${error}`);
   }
 }
+
+//Requisito 5
+const simpsonFamily = './utils/data/simpsonFamily.json';
+
+async function addPerson() {
+  const nelson = { id: 5, name: 'Nelson Muntz' };
+  try {
+    const resolve = await fs.readFile(simpsonFamily, 'utf-8');
+    const content = await JSON.parse(resolve);
+    content.push(nelson);
+    await fs.writeFile(simpsonFamily, JSON.stringify(content));
+    console.log('Operação realizada com sucesso');
+  } catch(error) {
+    console.error(`${error}`);
+  }
+}
+
+addPerson();
