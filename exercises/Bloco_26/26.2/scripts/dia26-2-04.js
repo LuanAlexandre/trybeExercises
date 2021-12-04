@@ -35,3 +35,16 @@ async function filterPersons() {
     console.error(`Não foi possível escrever no arquivo: ${error}`);
   }
 }
+
+//Requisito 4
+async function createNewSimpsonsFile() {
+  try {
+    const resolve = await fs.readFile(simpsons, 'utf-8');
+    const content = await JSON.parse(resolve);
+    const family = content.filter(({ id }) => (id === '1' || id === '2' || id === '3' || id === '4'));
+    await fs.writeFile('./utils/data/simpsonFamily.json', JSON.stringify(family));
+    console.log('Arquivo criado com sucesso');
+  } catch(error) {
+    console.error(`${error}`);
+  }
+}
