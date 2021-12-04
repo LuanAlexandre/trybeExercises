@@ -7,7 +7,8 @@
     "exercicio4": "node scripts/dia26-2-04.js",
     "exercicio5": "node scripts/dia26-2-05.js",
     "exercicio6": "node scripts/dia26-2-06.js",
-    "exercicio7": "node scripts/dia26-2-07.js"
+    "exercicio7": "node scripts/dia26-2-07.js",
+    "exercicio12": "node scripts/dia26-2-12.js"
   },
   "keywords": [],
   "author": "",
