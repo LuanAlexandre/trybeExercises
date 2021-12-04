@@ -4,7 +4,8 @@
   "description": "## Dia 2 - Node.js - Fluxo Assíncrono",
   "main": "index.js",
   "scripts": {
-    "exercicio4": "node scripts/dia26-2-04.js"
+    "exercicio4": "node scripts/dia26-2-04.js",
+    "exercicio5": "node scripts/dia26-2-05.js"
   },
   "keywords": [],
   "author": "",
