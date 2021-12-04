@@ -1,0 +1,12 @@
+{
+  "name": "dia26-2",
+  "version": "1.0.0",
+  "description": "## Dia 2 - Node.js - Fluxo Assíncrono",
+  "main": "index.js",
+  "scripts": {
+    "exercicio4": "node scripts/dia26-2-04.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
