@@ -23,4 +23,11 @@ app.post('/greeting', (req, res) => {
   if(age <= 17) return res.status(401).json({ message: 'Unauthorized' });
 });
 
+//Exercício 4
+app.put('/users/:name/:age', (req, res) => {
+  const { name, age } = req.params;
+  
+  res.status(200).json({ message: `Seu nome é ${name} e você tem ${age} anos de idade`});
+});
+
 app.listen(PORT, () => console.log(`App listening on port ${PORT}!`));
