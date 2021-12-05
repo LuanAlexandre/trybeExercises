@@ -31,8 +31,19 @@ app.put('/users/:name/:age', (req, res) => {
   res.status(200).json({ message: `Seu nome é ${name} e você tem ${age} anos de idade`});
 });
 
-//Exercício 6
 const simpsons = './utils/data/simpsons.json';
+//Exercício 7
+app.get('/simpsons/:id', async(req, res) => {
+  const { id } = req.params;
+  const content = JSON.parse(await fs.readFile(simpsons, 'utf-8'));
+  const simpson = content.find((s) => parseInt(s.id) === parseInt(id));
+
+  if(!simpson) return res.status(404).json({ message: 'simpson not found' });
+
+  res.status(200).json(simpson);
+});
+
+//Exercício 6
 app.get('/simpsons', async (req, res) => {
   const file = JSON.parse(await fs.readFile(simpsons, 'utf-8'));
 
