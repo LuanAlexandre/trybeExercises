@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const fs = require('fs').promises;
 const app = express();
 const PORT = 3001;
 
@@ -28,6 +29,14 @@ app.put('/users/:name/:age', (req, res) => {
   const { name, age } = req.params;
   
   res.status(200).json({ message: `Seu nome é ${name} e você tem ${age} anos de idade`});
+});
+
+//Exercício 6
+const simpsons = './utils/data/simpsons.json';
+app.get('/simpsons', async (req, res) => {
+  const file = JSON.parse(await fs.readFile(simpsons, 'utf-8'));
+
+  res.status(200).json(file);
 });
 
 app.listen(PORT, () => console.log(`App listening on port ${PORT}!`));
