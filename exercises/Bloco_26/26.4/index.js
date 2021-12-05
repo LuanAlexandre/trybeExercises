@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs').promises;
+const generateToken = require('./utils/modules/crypto');
 const app = express();
 const PORT = 3001;
 
@@ -70,6 +71,17 @@ app.post('/simpsons', tokenValidate, async (req, res) => {
 
   await fs.writeFile(simpsons, JSON.stringify(content));
   res.status(204).end();
+});
+
+//Exercício Bônus 2
+app.post('/signup', (req, res) => {
+  const { email, password, firstName, phone } = req.body;
+
+  if(!email || !password || !firstName || !phone) return res.status(401).json({ message: 'missing fields' });
+
+  const token = generateToken();
+
+  res.status(200).json({ message: `${token}`});
 });
 
 app.listen(PORT, () => console.log(`App listening on port ${PORT}!`));
