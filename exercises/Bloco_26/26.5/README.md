@@ -44,6 +44,8 @@
 
 ## Atividade 3
 
+**Obs: A ideia é apenas exercitar, portanto, o banco de dados não foi centralizado;**
+
 1. Crie uma rota `GET /posts/:id` que receba uma requisição com um **id** como `param route` , verifique existência do post com aquele id, onde:
 
     1. O `id` deve existir;
