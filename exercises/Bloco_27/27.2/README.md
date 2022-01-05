@@ -119,3 +119,29 @@ Bons estudos!
           "uf": "SP",
         }
         ```
+
+## Bônus
+
+1. Utilize uma API externa para buscar CEPs que não existem no banco de dados.
+
+2. Quando um CEP não existir no banco de dados, utilize a API [https://viacep.com.br/ws/[numero-do-cep]/json/](https://viacep.com.br/ws/[numero-do-cep]/json/) para obter suas informações.
+
+3. Caso o CEP não exista na API externa, você receberá o JSON `{ "erro": true }`. Nesse caso, retorne status `404 Not Found` com o seguinte JSON:
+
+    ```js
+    { "error": { "code": "notFound", "message": "CEP não encontrado" } }
+    ```
+
+4. Caso o CEP exista na API externa, armazene-o no banco e devolva seus dados no seguinte formato:
+
+```js
+{
+  "cep": "01001-000",
+  "logradouro": "Praça da Sé",
+  "bairro": "Sé",
+  "localidade": "São Paulo",
+  "uf": "SP",
+}
+```
+
+**Dica** : Na arquitetura MSC, os models são responsáveis por toda a **comunicação externa de uma aplicação**, o que inclui APIs externas. Logo, você precisará de um model para acessar a API.
