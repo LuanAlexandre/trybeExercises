@@ -1,3 +1,4 @@
+const { ObjectId } = require('mongodb');
 const connection = require('./connection');
 
 // Função de validação do campos de nome
@@ -52,7 +53,25 @@ const list = async () => {
   return users;
 }
 
+const userExists = (user) => {
+  const message = 'Usuário não encontrado';
+  if (!user) throw new Error(message);
+};
+
+const findById = async (id) => {
+  const connect = await connection();
+  const user = await connect.collection('users').findOne({ _id: ObjectId(id) });
+  userExists(user);
+  return {
+    id: user._id,
+    firstName: user.firstName,
+    lastName: user.lastName,
+    email: user.email,
+  };
+}
+
 module.exports = {
   create,
   list,
+  findById,
 };
