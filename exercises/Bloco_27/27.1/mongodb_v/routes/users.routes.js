@@ -1,5 +1,5 @@
 const express = require('express');
-const { create, list, findById, update } = require('../models/users');
+const { create, list, findById, update, remove } = require('../models/users');
 
 const router = express.Router();
 
@@ -53,6 +53,19 @@ router.put('/:id', async (req, res, next) => {
 
     return res.status(200).json(newInfo);
 
+  } catch (error) {
+    console.error(error.message);
+    return next(error);
+  }
+});
+
+router.delete('/:id', async (req, res, next) => {
+  try {
+    const { id } = req.params;
+
+    await remove(id);
+
+    return res.status(200).json({ message: "Concluído" });
   } catch (error) {
     console.error(error.message);
     return next(error);

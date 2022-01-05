@@ -88,9 +88,16 @@ const update = async (id, firstName, lastName, email, password) => {
   };
 };
 
+const remove = async (id) => {
+  const connect = await connection();
+  await connect.collection('users').deleteOne({ _id: ObjectId(id) });
+  return;
+}
+
 module.exports = {
   create,
   list,
   findById,
   update,
+  remove,
 };
