@@ -10,7 +10,7 @@ app.use(express.json());
 
 app.use('/user', users);
 
-app.listen(PORT, () => console.log(`Example app listening on port ${PORT}!`));
+app.listen(PORT, () => console.log(`Server is running in  http://localhost:${PORT}`));
 
 app.use(errorMiddleware);
 

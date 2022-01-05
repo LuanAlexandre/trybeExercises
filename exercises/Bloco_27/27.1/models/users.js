@@ -46,6 +46,13 @@ const create = async (firstName, lastName, email, password) => {
   };
 };
 
+const list = async () => {
+  const connect = await connection();
+  const users = await connect.collection('users').find().toArray();
+  return users;
+}
+
 module.exports = {
   create,
+  list,
 };
