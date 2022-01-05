@@ -89,9 +89,14 @@ const update = async (id, firstName, lastName, email, password) => {
   };
 };
 
+const remove = async (id) => {
+  await connection.execute('DELETE FROM users_crud.users WHERE id = ?', [id]);
+}
+
 module.exports = {
   create,
   list,
   findById,
   update,
+  remove,
 };
