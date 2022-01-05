@@ -1,4 +1,3 @@
-const { ObjectId } = require('mongodb');
 const connection = require('./connection');
 
 // Função de validação do campos de nome
@@ -37,10 +36,12 @@ const create = async (firstName, lastName, email, password) => {
   validateName(firstName, lastName);
   validateEmail(email);
   validatePassword(password);
-  const connect = await connection();
-  const created = await connect.collection('users').insertOne({ firstName, lastName, email, password });
+  const [created] = await connection.execute(
+    'INSERT INTO users_crud.users (first_name, last_name, email, password) VALUES (?, ?, ?, ?)',
+    [firstName, lastName, email, password],
+  );
   return {
-    id: created.insertedId,
+    id: created.insertId,
     firstName,
     lastName,
     email,
@@ -48,8 +49,7 @@ const create = async (firstName, lastName, email, password) => {
 };
 
 const list = async () => {
-  const connect = await connection();
-  const users = await connect.collection('users').find().toArray();
+  const [users] = await connection.execute('SELECT * FROM users_crud.users');
   return users;
 };
 
@@ -59,14 +59,16 @@ const userExists = (user) => {
 };
 
 const findById = async (id) => {
-  const connect = await connection();
-  const user = await connect.collection('users').findOne({ _id: ObjectId(id) });
+  const [user] = await connection.execute(
+    'SELECT id, first_name, last_name, email FROM users_crud.users WHERE id = ?',
+    [id],
+  );
   userExists(user);
   return {
-    id: user._id,
-    firstName: user.firstName,
-    lastName: user.lastName,
-    email: user.email,
+    id: user[0].id,
+    firstName: user[0].first_name,
+    lastName: user[0].last_name,
+    email: user[0].email,
   };
 };
 
@@ -75,10 +77,9 @@ const update = async (id, firstName, lastName, email, password) => {
   validateEmail(email);
   validatePassword(password);
   userExists(id);
-  const connect = await connection();
-  await connect.collection('users').updateOne(
-    { _id: ObjectId(id)},
-    { $set: { "firstName": firstName, "lastName": lastName, "email": email, "password": password } }
+  await connection.execute(
+    'UPDATE users_crud.users SET first_name = ?, last_name = ?, email = ?, password = ? WHERE id = ?',
+    [firstName, lastName, email, password, id],
   );
   return {
     id,
