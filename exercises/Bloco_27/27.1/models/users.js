@@ -51,7 +51,7 @@ const list = async () => {
   const connect = await connection();
   const users = await connect.collection('users').find().toArray();
   return users;
-}
+};
 
 const userExists = (user) => {
   const message = 'Usuário não encontrado';
@@ -68,10 +68,29 @@ const findById = async (id) => {
     lastName: user.lastName,
     email: user.email,
   };
-}
+};
+
+const update = async (id, firstName, lastName, email, password) => {
+  validateName(firstName, lastName);
+  validateEmail(email);
+  validatePassword(password);
+  userExists(id);
+  const connect = await connection();
+  await connect.collection('users').updateOne(
+    { _id: ObjectId(id)},
+    { $set: { "firstName": firstName, "lastName": lastName, "email": email, "password": password } }
+  );
+  return {
+    id,
+    firstName,
+    lastName,
+    email,
+  };
+};
 
 module.exports = {
   create,
   list,
   findById,
+  update,
 };

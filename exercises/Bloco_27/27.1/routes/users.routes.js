@@ -1,5 +1,5 @@
 const express = require('express');
-const { create, list, findById } = require('../models/users');
+const { create, list, findById, update } = require('../models/users');
 
 const router = express.Router();
 
@@ -31,6 +31,28 @@ router.post('/', async (req, res, next) => {
     const newUser = await create(firstName, lastName, email, password);
 
     return res.status(201).json({ newUser });
+  } catch (error) {
+    console.error(error.message);
+    return next(error);
+  }
+});
+
+router.put('/:id', async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const { firstName, lastName, email, password } = req.body;
+
+    const alteredUser = await update(id, firstName, lastName, email, password);
+
+    const newInfo = {
+      id: alteredUser.id,
+      firstName,
+      lastName,
+      email,
+    };
+
+    return res.status(200).json(newInfo);
+
   } catch (error) {
     console.error(error.message);
     return next(error);
