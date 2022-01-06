@@ -1,8 +1,10 @@
 const express = require('express');
-const { find } = require('../controllers/cepController');
+const { find, create } = require('../controllers/cepController');
 
 const router = express.Router();
 
 router.get('/:cep', find);
+
+router.post('/', create);
 
 module.exports = router;
