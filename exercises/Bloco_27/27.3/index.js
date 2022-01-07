@@ -14,5 +14,5 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/beers', beersController);
 
 app.listen(PORT, () => {
-  console.log("App listening on port 3000!");
+  console.log(`App listening on port ${PORT}!`);
 });
