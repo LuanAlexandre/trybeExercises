@@ -12,42 +12,55 @@ const cepSchema = Joi.object({
 
 const validateCep = (cep) => {
   const validCep = /\d{5}-?\d{3}/;
-  return validCep.test(cep);
-};
 
-const validateInfo = (info) => {
-  const { error } = cepSchema.validate(info);
+  if (!validCep.test(cep)) return { error: { code: 'invalidData', status: 400, message: 'CEP inválido' }};
 
-  if (error) throw { error: { code: 'invalidData', status: 400, message: error.message } };
-
-  return info;
+  return cep;
 };
 
 const findCep = async (cep) => {
-  const isValidCep = validateCep(cep);
-
-  if (!isValidCep) throw { error: { code: 'invalidData', status: 400, message: 'CEP inválido' }};
-
   const answer = await cepModel.searchCep(cep);
 
-  if (!answer) throw { error: { code: 'notFound', status: 404, message: 'CEP não encontrado'}};
+  if (!answer) return { error: { code: 'notFound', status: 404, message: 'CEP não encontrado'}};
 
   return answer;
 };
 
-const createCep = async ({ cep, logradouro, bairro, localidade, uf }) => {
-  validateInfo({ cep, logradouro, bairro, localidade, uf });
+const validateInfo = (cep, logradouro, bairro, localidade, uf) => {
+  console.log('To validando as informacoes');
+  const { error } = cepSchema.validate({ cep, logradouro, bairro, localidade, uf });
 
+  if (error) return { error: { code: 'invalidData', status: 400, message: error.message } };
+
+  return true;
+};
+
+const validInexistenceOfCep = async (cep) => {
+  console.log('To validando se o cep ja existe');
   const exists = await findCep(cep);
 
-  if (exists && exists.length !== 0) throw { error: { code: 'alreadyExists', status: 409, message: 'CEP já existente' }};
+  if (!exists.error) return { error: { code: 'alreadyExists', status: 409, message: 'CEP já existente' }};
 
-  const answer = await cepModel.createCep(cep, logradouro, bairro, localidade, uf);
+  return exists;
+};
 
-  return answer;
+const createCep = async (cep, logradouro, bairro, localidade, uf) => {
+  console.log('To criando o cep');
+  await cepModel.createCep(cep, logradouro, bairro, localidade, uf);
+
+  return {
+    cep,
+    logradouro,
+    bairro,
+    localidade,
+    uf,
+  };
 };
 
 module.exports = {
   findCep,
   createCep,
+  validateCep,
+  validateInfo,
+  validInexistenceOfCep,
 };

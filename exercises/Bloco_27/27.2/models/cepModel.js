@@ -6,23 +6,18 @@ const searchCep = async (cep) => {
     [cep],
   );
 
-  return answer;
+  return answer[0];
 };
 
 const createCep = async (cep, logradouro, bairro, localidade, uf) => {
-  await connection.execute(
+  console.log('To adicionando no banco');
+  const [answer] = await connection.execute(
     'INSERT INTO cep_lookup.ceps (cep, logradouro, bairro, localidade, uf) VALUES (?, ?, ?, ?, ?)',
     [cep, logradouro, bairro, localidade, uf],
   );
 
-  return {
-    cep,
-    logradouro,
-    bairro,
-    localidade,
-    uf,
-  };
-}
+  return answer;
+};
 
 module.exports = {
   searchCep,
