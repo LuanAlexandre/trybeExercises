@@ -40,7 +40,7 @@ const create = async (req, res, _next) => {
 
     const newCep = await createCep(cep, logradouro, bairro, localidade, uf);
 
-    return res.status(200).json(newCep);s
+    return res.status(201).json(newCep);
   } catch (error) {
     console.error(`POST CREATE CEP -> ${error.message}`);
     return res.status(error.status).json(error.message);

@@ -21,7 +21,11 @@ const validateCep = (cep) => {
 const findCep = async (cep) => {
   const answer = await cepModel.searchCep(cep);
 
-  if (!answer) return { error: { code: 'notFound', status: 404, message: 'CEP não encontrado'}};
+  if (!answer) {
+    const newTry = await apiModel.getCEPs(cep);
+    if (newTry.error) return { error: { code: 'notFound', status: 404, message: 'CEP não encontrado'}};
+    return newTry;
+  }
 
   return answer;
 };
