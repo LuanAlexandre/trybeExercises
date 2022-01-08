@@ -1,15 +1,12 @@
+const { ObjectId } = require('mongodb');
 const connection = require('./connection');
 
 const add = async (name, brand) => {
   try {
-    const [
-      result,
-    ] = await connection.query(
-      `INSERT INTO products (name, brand) VALUES (?, ?);`,
-      [name, brand]
-    );
+    const connect = await connection();
+    const created = await connect.collection('products').insertOne({ name, brand });
 
-    return { id: result.insertId, name, brand };
+    return { id: created.insertedId, name, brand };
   } catch (err) {
     console.error(err);
     return process.exit(1);
@@ -18,8 +15,9 @@ const add = async (name, brand) => {
 
 const getAll = async () => {
   try {
-    const [rows] = await connection.query('SELECT * FROM products');
-    return rows;
+    const connect = await connection();
+    const result = await connect.collection('products').find().toArray();
+    return result;
   } catch (err) {
     console.error(err);
     return process.exit(1);
@@ -28,9 +26,9 @@ const getAll = async () => {
 
 const getById = async (id) => {
   try {
-    const [result] = await connection.query('SELECT * FROM products WHERE id = ?', [id]);
-    if (!result.length) return null
-    return result[0];
+    const connect = await connection();
+    const result = await connect.collection('products').findOne({ _id: ObjectId(id) });
+    return result;
   } catch (err) {
     console.error(err);
     return process.exit(1);
@@ -39,7 +37,8 @@ const getById = async (id) => {
 
 const update = async (id, name, brand) => {
   try {
-    await connection.query('UPDATE products SET name = ?, brand = ? WHERE id = ?', [name, brand, id])
+    const connect = await connection();
+    await connect.collection('products').updateOne({ _id: ObjectId(id) }, { $set: { name, brand }});
   } catch (err) {
     console.error(err);
     return process.exit(1);
@@ -48,10 +47,8 @@ const update = async (id, name, brand) => {
 
 const exclude = async (id) => {
   try {
-    const product = await getById(id);
-    if (!product) return {};
-    await connection.query('DELETE FROM products WHERE id = ?', [id])
-    return product;
+    const connect = await connection();
+    await connect.collection('products').deleteOne({ _id: ObjectId(id) });
   } catch (err) {
     console.error(err);
     return process.exit(1);
