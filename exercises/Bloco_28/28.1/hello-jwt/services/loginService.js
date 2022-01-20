@@ -56,13 +56,18 @@ const find = (name, password) => {
     throw error;
   }
 
+  if (name === 'admin' && password === 's3nh4S3gur4???') {
+    const token = createToken({ data: { admin: true, name, password } }, 'validandoComJWT');
+    return token;
+  }
+
   const user = database.find((user) => user.username === name && user.password === password);
 
   if (!user) {
     throw errorConstructor(404, 'Usuário não encontrado.');
   }
 
-  const token = createToken({ data: user }, 'validandoComJWT');
+  const token = createToken({ data: { admin: false, ...user } }, 'validandoComJWT');
 
   return token;
 };
