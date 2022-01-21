@@ -17,8 +17,8 @@ const list = () => {
   return users;
 };
 
-const find = (username) => {
-  const user = database.find((user) => user.username === username);
+const find = (username, password) => {
+  const user = database.find((user) => user.username === username && user.password === password);
 
   return user;
 };

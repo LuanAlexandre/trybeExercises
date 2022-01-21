@@ -36,19 +36,19 @@ const createToken = (data, secret) => {
   return jwt.sign({ data }, secret, jwtConfig);
 };
 
-const avaliateIfIsAdmin = (username, password) => {
-  if (username === 'admin' && password === 's3nh4S3gur4???') {
-    const token = createToken({ data: { admin: true, username } }, process.env.SECRET);
-    return token;
-  }
-};
+// const avaliateIfIsAdmin = (username, password) => {
+//   if (username === 'admin' && password === 's3nh4S3gur4???') {
+//     const token = createToken({ data: { admin: true, username } }, process.env.SECRET);
+//     return token;
+//   }
+// };
 
 const findUser = (username, password) => {
   avaliateExistence(username, password);
   validateUserData(username, password);
-  avaliateIfIsAdmin(username, password);
+  // avaliateIfIsAdmin(username, password);
 
-  const user = find(username);
+  const user = find(username, password);
 
   if (!user) {
     throw errorConstructor(404, 'Usuário não encontrado.');
