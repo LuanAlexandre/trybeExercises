@@ -1,7 +1,9 @@
-const { find } = require('../models/usersModel');
+const { create, find } = require('../models/usersModel');
 const Joi = require('joi');
-const errorConstructor = require('../utils/functions/errorConstructor');
+const { errorConstructor } = require('../utils/functions/errorConstructor');
 const jwt = require('jsonwebtoken');
+const { generateRandomNumber } = require('../utils/functions/generateRandomNumber');
+const { avaliateNumber } = require('../utils/functions/avaliateNumber');
 
 require('dotenv').config();
 
@@ -41,7 +43,7 @@ const avaliateIfIsAdmin = (username, password) => {
   }
 };
 
-const generateToken = (username, password) => {
+const findUser = (username, password) => {
   avaliateExistence(username, password);
   validateUserData(username, password);
   avaliateIfIsAdmin(username, password);
@@ -59,6 +61,27 @@ const generateToken = (username, password) => {
   return token;
 };
 
+const createUser = (username, password) => {
+  validateUserData(username, password);
+
+  const user = find(username);
+
+  if (user) {
+    const message = 'User already exists';
+    throw errorConstructor(409, message);
+  }
+
+  const number = generateRandomNumber();
+  const admin = avaliateNumber(number);
+
+  create(admin, username, password);
+
+  const token = createToken({ admin, username }, process.env.SECRET);
+
+  return token;
+}
+
 module.exports = {
-  generateToken,
+  findUser,
+  createUser,
 };

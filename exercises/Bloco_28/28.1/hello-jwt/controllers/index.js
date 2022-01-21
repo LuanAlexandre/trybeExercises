@@ -1,11 +1,11 @@
 const ping = require('./ping');
-const login = require('./loginController');
+const users = require('./usersController');
 const validation = require('./validationController');
 const admin = require('./adminController');
 
 module.exports = {
   ping,
-  login,
+  users,
   validation,
   admin,
 };

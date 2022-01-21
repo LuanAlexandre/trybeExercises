@@ -1,9 +1,9 @@
-const loginService = require('./loginService');
+const usersService = require('./usersService');
 const validationService = require('./validationService');
 const adminService = require('./adminService');
 
 module.exports = {
-  loginService,
+  usersService,
   validationService,
   adminService,
 };

@@ -23,11 +23,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/ping', controllers.ping);
 
-app.post('/login', controllers.login);
+app.post('/login', controllers.users.login);
 
-app.get('/users/me', middlewares.auth, controllers.validation);
+app.get('/users/me', middlewares.auth, controllers.validation.validation);
 
-app.get('/top-secret', middlewares.auth, middlewares.admin, controllers.admin);
+app.get('/top-secret', middlewares.auth, middlewares.admin, controllers.admin.access);
+
+app.post('/signup', controllers.users.signup);
 
 app.use(middlewares.error);
 

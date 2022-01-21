@@ -1,1 +1,5 @@
-module.exports = (statusCode, message) => ({ statusCode, message });
+const errorConstructor = (statusCode, message) => ({ statusCode, message });
+
+module.exports = {
+  errorConstructor,
+};

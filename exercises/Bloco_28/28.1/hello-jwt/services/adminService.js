@@ -1,4 +1,4 @@
-const errorConstructor = require("../utils/functions/errorConstructor");
+const { errorConstructor } = require("../utils/functions/errorConstructor");
 
 const verifyIfUserIsAdmin = (admin) => {
   if (admin === false) {

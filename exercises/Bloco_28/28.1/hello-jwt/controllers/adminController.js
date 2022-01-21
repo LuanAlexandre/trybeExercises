@@ -4,4 +4,6 @@ const access = (req, res, next) => {
   return res.status(200).json(secretContent);
 };
 
-module.exports = access;
+module.exports = {
+  access
+};

@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 const { find } = require('../models/usersModel');
-const errorConstructor = require("../utils/functions/errorConstructor");
+const { errorConstructor } = require("../utils/functions/errorConstructor");
 
 require('dotenv').config();
 
