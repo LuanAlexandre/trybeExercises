@@ -13,7 +13,6 @@ const avaliateIfTokenExists = (token) => {
 
 const validateToken = (token) => {
   const result = jwt.verify(token, process.env.SECRET);
-  console.log(result);
 
   const user = find(result.data.username);
 
